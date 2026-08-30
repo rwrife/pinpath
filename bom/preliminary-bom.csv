@@ -1,0 +1,13 @@
+Planning_Status,Item,Qty,Function,Candidate,Package_or_Module,Manufacturer,MPN,Estimated_Unit_Cost_USD,Source_URL,Notes
+PLANNING_ONLY,Controller module,1,USB device and scan controller,RP2040-class module,TBD module,TBD,TBD,TBD - live sourcing required,TBD,Exact module and pin availability require manufacturer datasheet validation
+PLANNING_ONLY,Custom main carrier PCB,1,Protected controller and test-bank interconnect,2-layer PCB,TBD dimensions,TBD,TBD,TBD - fabrication quote required,TBD,Real KiCad schematic and PCB do not exist yet
+PLANNING_ONLY,Test-bank connectors,2,Keyed 16-position bank interface,TBD keyed connector family,TBD,TBD,TBD,TBD - live sourcing required,TBD,Current rating pitch lifecycle and mating parts require validation
+PLANNING_ONLY,GPIO protection and series network,32,Limit fault current and protect scan nodes,TBD network,TBD,TBD,TBD,TBD - live sourcing required,TBD,Topology and quantity depend on electrical risk analysis
+PLANNING_ONLY,External-voltage precheck front end,2,Block scanning when voltage is observed,TBD divider clamp comparator or ADC network,TBD,TBD,TBD,TBD - live sourcing required,TBD,Threshold tolerance and fail-safe behavior require simulation and bench validation
+PLANNING_ONLY,Status indicator,1,Non-color-only device state,TBD display or coded LED plus labels,TBD,TBD,TBD,TBD - live sourcing required,TBD,Accessibility and current budget require validation
+PLANNING_ONLY,Start cancel control,1,Local deliberate scan control,TBD momentary switch,TBD,TBD,TBD,TBD - live sourcing required,TBD,Debounce and mechanical life require validation
+PLANNING_ONLY,Debug connector,1,Programming recovery and SWD,TBD header or pads,TBD,TBD,TBD,TBD - live sourcing required,TBD,Mating cable tracked as non-schematic item
+PLANNING_ONLY,Passive flying-lead adapter,1,First general-purpose cable interface,Numbered leads and keyed mating connector,TBD,TBD,TBD,TBD - live sourcing required,TBD,Adapter source may become a separate KiCad project
+PLANNING_ONLY,Known loopback self-test adapter,1,Fixture integrity verification,Passive loopback PCB,TBD,TBD,TBD,TBD - fabrication quote required,TBD,Expected map and revision must be machine-readable
+PLANNING_ONLY,USB data cable,1,Power and host connection,User-supplied or sourced USB cable,TBD,TBD,TBD,TBD - live sourcing required,TBD,Non-schematic item; do not connect a second powered host through test banks
+PLANNING_ONLY,Enclosure and fasteners,1,Physical protection and repairable assembly,Printed enclosure plus common fasteners,TBD,TBD,TBD,TBD - design and quote required,TBD,Non-schematic item; editable mechanical source planned

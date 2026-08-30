@@ -1,0 +1,46 @@
+# KiCad generated/local files
+*-backups/
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.lck
+fp-info-cache
+
+# Analysis and fabrication working outputs
+analysis/*/
+!analysis/manifest.json
+datasheets/
+bom/orders/
+hardware/fabrication/
+
+# Firmware build artifacts
+firmware/build/
+firmware/.cache/
+*.uf2
+*.elf
+*.map
+
+# App dependencies and build artifacts
+app/node_modules/
+app/dist/
+app/src-tauri/target/
+coverage/
+test-results/
+
+# IDE and OS state
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local databases and sidecars
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.db-shm
+*.db-wal
+
+# Temporary files and backups
+*.bak
+*.tmp
