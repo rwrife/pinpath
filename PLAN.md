@@ -49,6 +49,8 @@ Build a bench-top, USB-powered tester for disconnected passive cables and harnes
 7. Integrate on fabricated hardware; record precheck thresholds, scan behavior, expected measurements, and limitations.
 8. Publish assembly instructions, troubleshooting, inspected manufacturing outputs, licenses, and a versioned release archive.
 
+Milestone 1's normative baseline is captured in [system requirements](hardware/requirements.md), [architecture and profile semantics](docs/architecture.md), [protocol](docs/protocol.md), [misuse/fault analysis](docs/risk-analysis.md), and the [requirement-to-verification matrix](docs/verification-matrix.md). This closes the architecture definition only; the downstream evidence gates above remain open.
+
 ## Testing strategy
 
 - Pure host tests for scan scheduling, matrix classification, protocol parsing, profile comparison, and report serialization
