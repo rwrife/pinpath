@@ -9,9 +9,13 @@
 - Stream progress and final maps over a versioned USB CDC protocol.
 - Support local start/cancel, visible fault state, watchdog recovery, and documented bootloader/reflash behavior.
 
+## Safety boundary
+
+Firmware operates only on disconnected, de-energized passive assemblies and cannot override a failed precheck. It does not authorize mains, PoE, battery or battery-pack, powered USB through a test bank, vehicle, medical, life-safety, energized-circuit, or cable certification use.
+
 ## Interfaces and protocol
 
-The firmware will implement the device side of [`docs/protocol.md`](../docs/protocol.md). GPIO, ADC/comparator input, indicator, control, time source, and USB transport sit behind narrow interfaces so scan/classifier behavior can run in host tests without fabricated hardware.
+The firmware will implement the device side of [`docs/protocol.md`](../docs/protocol.md) and the safe-state/classification contract in [`docs/architecture.md`](../docs/architecture.md). GPIO, ADC/comparator input, indicator, control, time source, and USB transport sit behind narrow interfaces so scan/classifier behavior can run in host tests without fabricated hardware. The [verification matrix](../docs/verification-matrix.md) defines which host tests are simulation evidence and which later checks require a real board.
 
 ## Provisioning and update
 

@@ -6,7 +6,7 @@
 
 PinPath is planned as safe, repairable, open hardware for checking **disconnected, de-energized** passive cables and small wiring harnesses at a desk or workbench. Two configurable 16-position test banks connect through replaceable adapter boards or labeled flying leads. Firmware scans the conductors, reports the observed end-to-end map, and compares it with a user-selected expected map. A local desktop companion creates cable profiles and exports results.
 
-This repository is currently a **documentation and backlog scaffold only**. It does not yet contain a working schematic, PCB, firmware, app, validated BOM, ERC/DRC report, fabricated unit, or bench-test evidence.
+This repository is currently a **requirements and backlog scaffold only**. The MVP requirements, architecture, protocol semantics, risk analysis, and verification matrix are frozen in editable documentation, but it does not yet contain a working schematic, PCB, firmware, app, validated BOM, ERC/DRC report, fabricated unit, or bench-test evidence.
 
 ## Motivation
 
@@ -47,8 +47,8 @@ Continuity mode on a multimeter works for one conductor at a time, but repetitiv
 
 ## Non-goals
 
-- Testing energized cables, mains wiring, PoE, batteries, automotive harnesses, or unknown live circuits
-- USB/Ethernet signal-integrity, bandwidth, impedance, insulation, hipot, or certification measurements
+- Testing energized cables, mains wiring, PoE, batteries or battery packs, powered USB through a test bank, vehicles, medical or life-safety wiring, or unknown live circuits
+- USB/Ethernet signal-integrity, bandwidth, impedance, insulation, hipot, precision-resistance, cable certification, or other certification measurements
 - Four-wire milliohm measurement or calibrated resistance metrology
 - Automatic connector identification
 - Cloud dashboards, remote unattended operation, or production-line certification claims
@@ -82,7 +82,7 @@ Final BOM data belongs in **KiCad schematic symbol properties** (including Manuf
 
 ## Current status and milestones
 
-- **Now:** documentation/backlog scaffold and planning-only candidate BOM
+- **Now:** frozen MVP requirements/architecture and planning-only candidate BOM
 - **M1:** requirements, risk analysis, and adapter/test architecture
 - **M2:** datasheet-backed component selection, editable KiCad schematic, and clean/documented ERC
 - **M3:** PCB, DRC, firmware, protocol, and simulated fixture tests
@@ -91,7 +91,13 @@ Final BOM data belongs in **KiCad schematic symbol properties** (including Manuf
 
 ## Development quickstart
 
-No application or hardware source exists yet. After the skeleton issue lands, expected commands are:
+No application or hardware source exists yet. The current repeatable documentation check is:
+
+```bash
+python3 tools/verify_requirements.py
+```
+
+After implementation skeletons land, expected commands are:
 
 ```bash
 # Firmware (planned)
@@ -106,7 +112,7 @@ npm test
 npm run tauri build
 ```
 
-Those commands are architectural targets, not current passing results. See [PLAN.md](PLAN.md), [hardware/README.md](hardware/README.md), and the issue backlog for the implementation sequence.
+Those firmware/app commands are architectural targets, not current passing results. See [PLAN.md](PLAN.md), [system requirements](hardware/requirements.md), [architecture](docs/architecture.md), [risk analysis](docs/risk-analysis.md), [verification matrix](docs/verification-matrix.md), and the issue backlog for the implementation sequence.
 
 ## Licensing
 
