@@ -6,7 +6,7 @@
 
 PinPath is planned as safe, repairable, open hardware for checking **disconnected, de-energized** passive cables and small wiring harnesses at a desk or workbench. Two configurable 16-position test banks connect through replaceable adapter boards or labeled flying leads. Firmware scans the conductors, reports the observed end-to-end map, and compares it with a user-selected expected map. A local desktop companion creates cable profiles and exports results.
 
-This repository is currently a **requirements and backlog scaffold only**. The MVP requirements, architecture, protocol semantics, risk analysis, and verification matrix are frozen in editable documentation, but it does not yet contain a working schematic, PCB, firmware, app, validated BOM, ERC/DRC report, fabricated unit, or bench-test evidence.
+This repository now contains the frozen MVP requirements/architecture and a manufacturer-backed **rev-A candidate component selection** with checked static front-end calculations. It still does not contain a working schematic, PCB, firmware, app, validated/orderable BOM, ERC/DRC report, fabricated unit, or bench-test evidence. The candidate limits deliberately keep scanning unauthorized until physical characterization.
 
 ## Motivation
 
@@ -72,6 +72,7 @@ hardware/pinpath.kicad_pro    # planned editable KiCad project; not created yet
 hardware/pinpath.kicad_sch    # planned editable schematic; not created yet
 hardware/pinpath.kicad_pcb    # planned editable carrier PCB; not created yet
 hardware/adapters/            # planned editable adapter-board sources
+hardware/selection/           # rev-A candidate parts, evidence, calculations, and unvalidated limits
 firmware/                     # planned RP2040 firmware
 app/                          # planned local desktop companion
 bom/preliminary-bom.csv       # planning-only candidates
@@ -82,7 +83,7 @@ Final BOM data belongs in **KiCad schematic symbol properties** (including Manuf
 
 ## Current status and milestones
 
-- **Now:** frozen MVP requirements/architecture and planning-only candidate BOM
+- **Now:** frozen MVP requirements/architecture plus rev-A candidate component selection and static calculations; schematic and physical validation remain pending
 - **M1:** requirements, risk analysis, and adapter/test architecture
 - **M2:** datasheet-backed component selection, editable KiCad schematic, and clean/documented ERC
 - **M3:** PCB, DRC, firmware, protocol, and simulated fixture tests
@@ -91,10 +92,13 @@ Final BOM data belongs in **KiCad schematic symbol properties** (including Manuf
 
 ## Development quickstart
 
-No application or hardware source exists yet. The current repeatable documentation check is:
+No application, KiCad design, or fabricated hardware exists yet. Current repeatable static checks are:
 
 ```bash
 python3 tools/verify_requirements.py
+python3 hardware/selection/calculate_frontend.py --output hardware/selection/front-end-analysis.json
+python3 -m unittest discover -s hardware/selection -p 'test_*.py' -v
+python3 tools/verify_component_selection.py
 ```
 
 After implementation skeletons land, expected commands are:

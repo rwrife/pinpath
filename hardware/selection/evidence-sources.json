@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "retrieved_utc": "2026-09-01",
+  "evidence_context": "manufacturer_document_review_and_public_distributor_listing",
+  "limitations": [
+    "DigiKey API credentials were unavailable; no API stock snapshot or quantity pricing was obtained.",
+    "Public distributor pages are time-sensitive and must be rechecked before ordering.",
+    "C&K returned HTTP 403 for automated PDF download; the durable manufacturer product page and indexed datasheet URL are retained, but the switch PDF was not locally extracted.",
+    "No installed KiCad footprint library or kicad-cli was available; package selections are manufacturer-backed, while exact library-land-pattern checks are deferred to issue #3.",
+    "No source here is physical, bench, hardware-in-loop, or field evidence."
+  ],
+  "sources": [
+    {
+      "id": "RPI-PICO-DS",
+      "manufacturer": "Raspberry Pi Ltd",
+      "parts": ["SC0915"],
+      "url": "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf",
+      "document": "Raspberry Pi Pico Datasheet",
+      "sections": ["1 Introduction", "2 Mechanical specification", "4.2 General purpose I/O", "4.3 Using the ADC", "4.4 Powerchain", "4.7 USB"],
+      "facts_used": ["26 exposed 3.3 V GPIO, including GPIO26-28 ADC inputs", "micro-USB power/data and USB resistors included", "3-pin SWD", "3V3 external load recommended below 300 mA", "ADC input must remain below IOVDD plus approximately 300 mV", "ADC supply/reference caveats"]
+    },
+    {
+      "id": "RPI-RP2040-DS",
+      "manufacturer": "Raspberry Pi Ltd",
+      "parts": ["RP2040 on SC0915"],
+      "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf",
+      "document": "RP2040 Datasheet",
+      "sections": ["2.19 GPIO", "4.9 ADC", "5.5.3 Pin Specifications"],
+      "facts_used": ["GPIO26-29 ADC capability", "ADC round-robin/FIFO capability", "IO absolute range -0.5 V to IOVDD + 0.5 V"]
+    },
+    {
+      "id": "TI-TMUX1108-DS",
+      "manufacturer": "Texas Instruments",
+      "parts": ["TMUX1108PWR"],
+      "url": "https://www.ti.com/lit/ds/symlink/tmux1108.pdf",
+      "document": "TMUX1108 8:1 Precision Multiplexer Datasheet, Rev. B",
+      "sections": ["Table 5-1 Pin Functions", "6.1 Absolute Maximum Ratings", "6.3 Recommended Operating Conditions", "6.6 Electrical Characteristics at 3.3 V"],
+      "facts_used": ["EN active high; low disables all switches", "1.08 V to 5.5 V single supply", "signal path VSS to VDD", "9.75 ohm maximum RON at 3.3 V and 125 C", "1.5 nA maximum off/on leakage at 3.3 V and 125 C", "60 mA continuous switch current at 125 C", "1.35 V VIH and 0.8 V VIL", "TSSOP-16 pinout and decoupling guidance"]
+    },
+    {
+      "id": "TI-TPD4E1U06-DS",
+      "manufacturer": "Texas Instruments",
+      "parts": ["TPD4E1U06DCKR"],
+      "url": "https://www.ti.com/lit/ds/symlink/tpd4e1u06.pdf",
+      "document": "TPD4E1U06 Quad-Channel ESD Protection Datasheet, Rev. D",
+      "sections": ["5 Pin Configuration", "6.3 IEC ESD Ratings", "6.4 Recommended Operating Conditions", "6.6 Electrical Characteristics"],
+      "facts_used": ["four channels in SC70-6", "plus/minus 15 kV IEC 61000-4-2 contact and air", "0 V to 5.5 V operating input", "10 nA maximum leakage", "6.5 V minimum breakdown"]
+    },
+    {
+      "id": "NEX-BAS70-04-DS",
+      "manufacturer": "Nexperia B.V.",
+      "parts": ["BAS70-04,215"],
+      "url": "https://assets.nexperia.com/documents/data-sheet/BAS70-04.pdf",
+      "document": "BAS70-04 General-Purpose Dual Schottky Diode Datasheet",
+      "sections": ["Table 2 Pinning", "Table 5 Limiting Values", "Table 7 Characteristics"],
+      "facts_used": ["dual-series SOT-23 pinout", "70 V reverse voltage", "70 mA continuous forward current", "410 mV maximum VF at 1 mA", "100 nA maximum leakage at 50 V and 25 C"]
+    },
+    {
+      "id": "TI-REF33-DS",
+      "manufacturer": "Texas Instruments",
+      "parts": ["REF3318AIDBZR"],
+      "url": "https://www.ti.com/lit/ds/symlink/ref33.pdf",
+      "document": "REF33xx Voltage Reference Datasheet, Rev. I",
+      "sections": ["Table 5-1 Pin Functions", "6.1 Absolute Maximum Ratings", "6.3 Recommended Operating Conditions", "6.4 Thermal Information", "6.5 Electrical Characteristics"],
+      "facts_used": ["1.8 V output", "plus/minus 0.15 percent maximum initial accuracy", "30 ppm/C maximum drift", "plus/minus 5 mA output range", "SOT-23-3 pinout", "-40 C to 125 C specified range"]
+    },
+    {
+      "id": "VISHAY-DCRCW-DS",
+      "manufacturer": "Vishay Dale",
+      "parts": ["CRCW080510K0FKEA", "CRCW0805100KFKEA", "CRCW08051K00FKEA"],
+      "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+      "document": "D/CRCW e3 Thick Film Chip Resistors Datasheet",
+      "sections": ["Technical Specifications", "Maximum Resistance Change", "Part Numbering"],
+      "facts_used": ["0805 standard-mode 0.125 W rating", "150 V maximum operating voltage", "1 percent F code", "-55 C to 155 C category range"]
+    },
+    {
+      "id": "MURATA-100N-PRODUCT",
+      "manufacturer": "Murata Manufacturing Co., Ltd.",
+      "parts": ["GRM21BR71C104KA01L"],
+      "url": "https://pim.murata.com/en-global/pim/details/?partNum=GRM21BR71C104KA01L",
+      "document": "Official product record",
+      "facts_used": ["100 nF, 16 V, X7R, plus/minus 10 percent, 0805"]
+    },
+    {
+      "id": "MURATA-1U-PRODUCT",
+      "manufacturer": "Murata Manufacturing Co., Ltd.",
+      "parts": ["GRM21BR71C105KA01L"],
+      "url": "https://pim.murata.com/en-global/pim/details/?partNum=GRM21BR71C105KA01L",
+      "document": "Official product record",
+      "facts_used": ["1 uF, 16 V, X7R, plus/minus 10 percent, 0805"]
+    },
+    {
+      "id": "MOLEX-43045-1600-PRODUCT",
+      "manufacturer": "Molex, LLC",
+      "parts": ["43045-1600"],
+      "url": "https://www.molex.com/en-us/products/part-detail/430451600",
+      "document": "Official Micro-Fit 3.0 board-header product record",
+      "facts_used": ["right-angle dual-row 16-circuit 3.00 mm keyed header", "mates with 43025 series"]
+    },
+    {
+      "id": "MOLEX-43025-1600-PRODUCT",
+      "manufacturer": "Molex, LLC",
+      "parts": ["43025-1600"],
+      "url": "https://www.molex.com/en-us/products/part-detail/430251600",
+      "document": "Official Micro-Fit 3.0 receptacle-housing product record",
+      "facts_used": ["active 16-circuit polarized receptacle housing"]
+    },
+    {
+      "id": "MOLEX-43030-0007-PRODUCT",
+      "manufacturer": "Molex, LLC",
+      "parts": ["43030-0007"],
+      "url": "https://www.molex.com/en-us/products/part-detail/430300007",
+      "document": "Official Micro-Fit 3.0 crimp-terminal product record and sales drawing",
+      "facts_used": ["20-24 AWG loose terminal option", "7 A maximum per-contact family record; PinPath signal current is far lower"]
+    },
+    {
+      "id": "CK-PTS636-PRODUCT",
+      "manufacturer": "C&K (Littelfuse)",
+      "parts": ["PTS636SK25FSMTRLFS"],
+      "url": "https://www.ckswitches.com/products/switches/product-details/Tactile/PTS636/PTS636SK25FSMTRLFS",
+      "datasheet_url": "https://www.ckswitches.com/media/2779/pts636.pdf",
+      "facts_used": ["SPST-NO top-actuated SMT", "2.5 mm height", "250 gf force", "50 mA at 12 VDC indexed rating"]
+    },
+    {
+      "id": "KINGBRIGHT-GREEN-DS",
+      "manufacturer": "Kingbright Electronic Co., Ltd.",
+      "parts": ["APT2012LZGCK"],
+      "url": "https://www.kingbrightusa.com/images/catalog/spec/APT2012LZGCK.pdf",
+      "document": "APT2012LZGCK Datasheet",
+      "sections": ["Electrical Characteristics", "Absolute Maximum Ratings"],
+      "facts_used": ["green 0805 LED", "2.2 V to 3.0 V forward voltage at 2 mA", "25 mA DC maximum", "-40 C to 85 C"]
+    },
+    {
+      "id": "KINGBRIGHT-RED-DS",
+      "manufacturer": "Kingbright Electronic Co., Ltd.",
+      "parts": ["APTD2012LSURCK"],
+      "url": "https://www.kingbrightusa.com/images/catalog/spec/APTD2012LSURCK.pdf",
+      "document": "APTD2012LSURCK Datasheet",
+      "sections": ["Electrical Characteristics", "Absolute Maximum Ratings"],
+      "facts_used": ["red 0805 LED", "1.5 V to 2.1 V forward voltage at 2 mA", "30 mA DC maximum", "-40 C to 85 C"]
+    },
+    {
+      "id": "SAMTEC-FTSH-PRODUCT",
+      "manufacturer": "Samtec, Inc.",
+      "parts": ["FTSH-105-01-L-DV-K"],
+      "url": "https://www.samtec.com/products/ftsh-105-01-l-dv-k",
+      "document": "Official FTSH configured-product record",
+      "facts_used": ["10-position dual-row vertical SMT header", "1.27 mm pitch", "keyed option"]
+    },
+    {
+      "id": "KEYSTONE-5015-PRODUCT",
+      "manufacturer": "Keystone Electronics Corp.",
+      "parts": ["5015"],
+      "url": "https://www.keyelco.com/product.cfm/product_id/1353",
+      "datasheet_url": "https://www.keyelco.com/pdfs/p33.pdf",
+      "facts_used": ["surface-mount micro-miniature loop test point", "silver-plated phosphor bronze"]
+    },
+    {
+      "id": "RPI-DEBUG-PROBE",
+      "manufacturer": "Raspberry Pi Ltd",
+      "parts": ["SC0889"],
+      "url": "https://www.digikey.com/en/products/detail/raspberry-pi/SC0889/17877576",
+      "document": "Public distributor listing",
+      "facts_used": ["RP2040 debug probe for local SWD; non-schematic bring-up item"]
+    }
+  ]
+}

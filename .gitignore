@@ -13,6 +13,10 @@ datasheets/
 bom/orders/
 hardware/fabrication/
 
+# Python generated files
+__pycache__/
+*.py[cod]
+
 # Firmware build artifacts
 firmware/build/
 firmware/.cache/

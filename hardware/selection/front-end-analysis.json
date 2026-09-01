@@ -1,0 +1,257 @@
+{
+  "derived": {
+    "bias_control_pull_low_current_a": 0.0018,
+    "bias_resistor_max_ohm": 101000.0,
+    "bias_resistor_min_ohm": 99000.0,
+    "default_8_repetition_conversion_budget_s": 1.96608,
+    "driven_endpoint_short_to_ground_current_a": 0.000366666667,
+    "fixed_external_source_precheck_cases": [
+      {
+        "external_source_ohm": 0.0,
+        "external_v": -5.0,
+        "high_phase_node_v_unclamped": -4.370485792851,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": -4.537121906508,
+        "low_phase_pass": false,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 0.0,
+        "external_v": -1.0,
+        "high_phase_node_v_unclamped": -0.740788267644,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": -0.907424381302,
+        "low_phase_pass": false,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 0.0,
+        "external_v": 0.0,
+        "high_phase_node_v_unclamped": 0.166636113657,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": 0.0,
+        "low_phase_pass": true,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 0.0,
+        "external_v": 1.8,
+        "high_phase_node_v_unclamped": 1.8,
+        "high_phase_pass": true,
+        "low_phase_node_v_unclamped": 1.633363886343,
+        "low_phase_pass": false,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 0.0,
+        "external_v": 3.3,
+        "high_phase_node_v_unclamped": 3.161136571952,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": 2.994500458295,
+        "low_phase_pass": false,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 0.0,
+        "external_v": 5.0,
+        "high_phase_node_v_unclamped": 4.703758020165,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": 4.537121906508,
+        "low_phase_pass": false,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 10000.0,
+        "external_v": -5.0,
+        "high_phase_node_v_unclamped": -3.852392947103,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": -4.156171284635,
+        "low_phase_pass": false,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 10000.0,
+        "external_v": -1.0,
+        "high_phase_node_v_unclamped": -0.527455919395,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": -0.831234256927,
+        "low_phase_pass": false,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 10000.0,
+        "external_v": 0.0,
+        "high_phase_node_v_unclamped": 0.303778337531,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": 0.0,
+        "low_phase_pass": true,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 10000.0,
+        "external_v": 1.8,
+        "high_phase_node_v_unclamped": 1.8,
+        "high_phase_pass": true,
+        "low_phase_node_v_unclamped": 1.496221662469,
+        "low_phase_pass": false,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 10000.0,
+        "external_v": 3.3,
+        "high_phase_node_v_unclamped": 3.04685138539,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": 2.743073047859,
+        "low_phase_pass": false,
+        "overall_pass": false
+      },
+      {
+        "external_source_ohm": 10000.0,
+        "external_v": 5.0,
+        "high_phase_node_v_unclamped": 4.459949622166,
+        "high_phase_pass": false,
+        "low_phase_node_v_unclamped": 4.156171284635,
+        "low_phase_pass": false,
+        "overall_pass": false
+      }
+    ],
+    "high_stimulus_groups": [
+      {
+        "drive_current_a": 3.0300046e-05,
+        "drive_node_v": 2.999704574549,
+        "group_size": 1,
+        "remote_delta_from_bias_v": null,
+        "remote_node_v": null
+      },
+      {
+        "drive_current_a": 5.5460817e-05,
+        "drive_node_v": 2.999459257034,
+        "group_size": 2,
+        "remote_delta_from_bias_v": 2.491161631261,
+        "remote_node_v": 2.491161631261
+      },
+      {
+        "drive_current_a": 9.4836201e-05,
+        "drive_node_v": 2.999075347036,
+        "group_size": 4,
+        "remote_delta_from_bias_v": 2.129902864825,
+        "remote_node_v": 2.129902864825
+      },
+      {
+        "drive_current_a": 0.00014702918,
+        "drive_node_v": 2.998566465494,
+        "group_size": 8,
+        "remote_delta_from_bias_v": 1.651046051635,
+        "remote_node_v": 1.651046051635
+      },
+      {
+        "drive_current_a": 0.000202847648,
+        "drive_node_v": 2.99802223543,
+        "group_size": 16,
+        "remote_delta_from_bias_v": 1.138926328886,
+        "remote_node_v": 1.138926328886
+      },
+      {
+        "drive_current_a": 0.000250373883,
+        "drive_node_v": 2.997558854644,
+        "group_size": 32,
+        "remote_delta_from_bias_v": 0.702885662268,
+        "remote_node_v": 0.702885662268
+      }
+    ],
+    "low_stimulus_groups": [
+      {
+        "drive_current_a": -1.8180028e-05,
+        "drive_node_v": 0.00017725527,
+        "group_size": 1,
+        "remote_delta_from_bias_v": null,
+        "remote_node_v": null
+      },
+      {
+        "drive_current_a": -3.327649e-05,
+        "drive_node_v": 0.00032444578,
+        "group_size": 2,
+        "remote_delta_from_bias_v": -1.494696978757,
+        "remote_node_v": 0.305303021243
+      },
+      {
+        "drive_current_a": -5.6901721e-05,
+        "drive_node_v": 0.000554791778,
+        "group_size": 4,
+        "remote_delta_from_bias_v": -1.277941718895,
+        "remote_node_v": 0.522058281105
+      },
+      {
+        "drive_current_a": -8.8217508e-05,
+        "drive_node_v": 0.000860120703,
+        "group_size": 8,
+        "remote_delta_from_bias_v": -0.990627630981,
+        "remote_node_v": 0.809372369019
+      },
+      {
+        "drive_current_a": -0.000121708589,
+        "drive_node_v": 0.001186658742,
+        "group_size": 16,
+        "remote_delta_from_bias_v": -0.683355797331,
+        "remote_node_v": 1.116644202669
+      },
+      {
+        "drive_current_a": -0.00015022433,
+        "drive_node_v": 0.001464687214,
+        "group_size": 32,
+        "remote_delta_from_bias_v": -0.421731397361,
+        "remote_node_v": 1.378268602639
+      }
+    ],
+    "max_repetition_adc_conversion_count": 131072,
+    "max_repetition_conversion_budget_s": 15.72864,
+    "negative_external_fault": {
+      "clamp_current_a": -0.000463636364,
+      "external_v": -5.0,
+      "series_resistor_power_w": 0.002128090909
+    },
+    "open_node_leakage_error_budget_v": 0.0112615,
+    "positive_external_fault": {
+      "clamp_current_a": 9.6969697e-05,
+      "external_v": 5.0,
+      "series_resistor_power_w": 9.3090909e-05
+    },
+    "series_resistor_max_ohm": 10100.0,
+    "series_resistor_min_ohm": 9900.0,
+    "two_drive_contention_current_a": 0.000183333333,
+    "worst_32_node_high_delta_v": 0.702885662268,
+    "worst_32_node_low_delta_v": -0.421731397361
+  },
+  "evidence_context": "static_calculation",
+  "inputs": {
+    "bias_feed_resistor_ohm": 1000.0,
+    "bias_high_nom_v": 1.8,
+    "bias_resistor_nom_ohm": 100000.0,
+    "bias_resistor_tolerance": 0.01,
+    "clamp_forward_drop_at_1ma_max_v": 0.41,
+    "clamp_reverse_leakage_budget_a": 1e-07,
+    "endpoints": 32,
+    "esd_leakage_max_a": 1e-08,
+    "external_fault_abs_v": 5.0,
+    "max_repetitions": 64,
+    "mux_off_leakage_max_a": 1.5e-09,
+    "mux_ron_max_ohm": 9.75,
+    "sample_budget_us": 120.0,
+    "sense_readings_per_drive_polarity": 32,
+    "series_resistor_nom_ohm": 10000.0,
+    "series_resistor_tolerance": 0.01,
+    "stimulus_max_v": 3.63,
+    "stimulus_min_v": 3.0,
+    "stimulus_polarities": 2
+  },
+  "model": "symmetric linear DC nodal model; ideal cable connections; no contact resistance or capacitance",
+  "physical_tested": false,
+  "provisional_thresholds": {
+    "continuity_min_abs_delta_from_bias_v": 0.25,
+    "note": "Provisional calculation thresholds only; limits-rev-a.json keeps validated=false until controlled bench characterization.",
+    "precheck_high_phase_max_abs_error_from_measured_reference_v": 0.2,
+    "precheck_low_phase_max_v": 0.2
+  },
+  "schema_version": "1.0.0",
+  "spice_simulated": false
+}

@@ -46,8 +46,8 @@ Status: architecture-stage analysis for disconnected, de-energized passive assem
 
 The architecture requirement is frozen, but these implementation values/evidence remain intentionally pending:
 
-- exact precheck thresholds, tolerances, stimulus voltage/current, continuity thresholds, and temperature range — issue #2 limits record;
-- exact controller/front-end/protection/connectors and pin mappings — issues #2/#3;
+- provisional precheck/continuity thresholds and fault-current calculations now exist in issue #2's `hardware/selection/limits-rev-a.json`, but remain `validated: false`; final tolerances and temperature range require issue #7 bench evidence;
+- exact controller/front-end/protection/connectors are selected in issue #2; schematic pin mapping and footprint verification remain issue #3 evidence;
 - physical layout/ESD/return paths and adapter keying — issue #4;
 - firmware/app test results — issues #5/#6;
 - actual threshold, fault-current, reset, timing, and repeatability measurements — issue #7 on fabricated hardware.
