@@ -32,7 +32,7 @@ Build a bench-top, USB-powered tester for disconnected passive cables and harnes
 
 ## Technology choices
 
-- **RP2040 ecosystem:** low cost, strong USB support, accessible Pico SDK, and common module options; exact part remains unvalidated.
+- **RP2040 ecosystem:** Raspberry Pi Pico `SC0915` is the rev-A schematic candidate because it provides module USB/power/SWD and enough exposed GPIO/ADC for the muxed front end. This is manufacturer-datasheet-backed selection, not physical validation; see `hardware/selection/`.
 - **KiCad:** editable, inspectable open-hardware source and schematic-property BOM workflow.
 - **Pico SDK + CMake:** repeatable firmware build with host-test seams.
 - **Tauri/Rust/TypeScript:** small local desktop package, robust serial/data boundary, and cross-platform UI without a cloud backend.
