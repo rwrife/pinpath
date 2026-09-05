@@ -16,7 +16,7 @@ USB 5 V SELV
                     de-energized cable
 ```
 
-The rev-A schematic candidate uses Raspberry Pi Pico `SC0915`, eight TI `TMUX1108PWR` muxes for independent stimulus/sense paths, 10 kΩ endpoint current limiting, low-leakage rail clamps, four-channel ESD arrays, and a two-phase 0/1.8 V precheck bias. Exact references, packages, manufacturer properties, and GPIO allocation are in [the component-selection handoff](selection/component-selection.md). This selection and its DC model are static evidence only: `selection/limits-rev-a.json` remains `validated: false`, so no scan is authorized before later schematic/layout review and bench characterization. Normative behavior and evidence gates remain in [requirements](requirements.md), [architecture](../docs/architecture.md), [risk analysis](../docs/risk-analysis.md), and the [verification matrix](../docs/verification-matrix.md).
+The rev-A schematic uses Raspberry Pi Pico `SC0915`, eight TI `TMUX1108PWR` muxes for independent stimulus/sense paths, 10 kΩ endpoint current limiting, low-leakage rail clamps, four-channel ESD arrays, and a two-phase 0/1.8 V precheck bias. The editable project is now in `pinpath.kicad_pro` / `pinpath.kicad_sch`; exact references, packages, manufacturer properties, GPIO allocation, and pinout evidence are in [the component-selection handoff](selection/component-selection.md) and [schematic pinout evidence](schematic-pinout-evidence.md). Native KiCad 9 ERC is clean, but this remains static EDA evidence only: `selection/limits-rev-a.json` is still `validated: false`, so no scan is authorized before layout review and bench characterization. Normative behavior and evidence gates remain in [requirements](requirements.md), [architecture](../docs/architecture.md), [risk analysis](../docs/risk-analysis.md), and the [verification matrix](../docs/verification-matrix.md).
 
 ## Interfaces
 
@@ -38,13 +38,19 @@ A small screw-fastened or snap-fit printed enclosure will expose the two adapter
 
 Use only with fully disconnected, de-energized passive cables and harnesses. Never attach mains, PoE, powered USB through a test bank, a battery or battery pack, vehicles, medical or life-safety wiring, or any energized circuit. PinPath makes no cable certification claim and is not a hipot tester, insulation tester, precision ohmmeter, or protective instrument. Protection circuitry cannot make prohibited live testing safe.
 
-## Expected editable KiCad deliverables
+## Editable KiCad deliverables
 
-The intended source paths are:
+Current schematic-stage sources and evidence are:
 
 - `hardware/pinpath.kicad_pro`
 - `hardware/pinpath.kicad_sch`
-- `hardware/pinpath.kicad_pcb`
-- `hardware/adapters/<adapter>.kicad_pro/.kicad_sch/.kicad_pcb`
+- `hardware/pinpath.kicad_sym`
+- `hardware/pinpath.pretty/RaspberryPi_Pico_SMD_HandSolder.kicad_mod`
+- `hardware/schematic-pinout-evidence.md`
+- `hardware/reports/pinpath-erc.rpt`
+- `hardware/reports/pinpath-schematic.pdf` (review supplement, not source)
+- `hardware/adapters/known-loopback/` (passive one-to-one electrical fixture definition)
+- `bom/bom.csv` (native export from schematic properties)
+- `bom/non-schematic-items.csv`
 
-These KiCad files **do not exist yet**. Issue #3 must create real editable sources, import the properties from `selection/parts-handoff.json`, and verify every pin/pad against manufacturer documents; image-only diagrams are not substitutes. Future work must retain ERC/DRC reports and fabrication-output inspection evidence. Final Manufacturer/MPN data belongs in schematic symbol properties and exports to tracked `bom/bom.csv`.
+The carrier PCB `hardware/pinpath.kicad_pcb`, physical adapter layout, DRC, and fabrication inspection remain issue #4 work. Final Manufacturer/MPN/source data lives in schematic symbol properties and exports to tracked `bom/bom.csv`; volatile costs remain explicitly `UNKNOWN` until dated supplier evidence is obtained.

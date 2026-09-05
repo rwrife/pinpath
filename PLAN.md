@@ -42,7 +42,7 @@ Build a bench-top, USB-powered tester for disconnected passive cables and harnes
 
 1. Freeze measurable requirements, misuse cases, fault model, connector numbering, and profile semantics.
 2. Select controller/protection/interface parts from manufacturer datasheets; record Manufacturer/MPN in KiCad properties.
-3. Create the real KiCad project and schematic, export the BOM, run ERC, and review pin mapping.
+3. **Schematic-stage complete:** create the real KiCad project and schematic, export the BOM, run ERC, and review pin mapping. PCB/physical validation is not implied.
 4. Lay out the carrier and first adapter, run DRC/analyzers, and inspect fabrication geometry.
 5. Build firmware plus host simulation/classifier tests and reproducible flashing/recovery.
 6. Build the desktop companion and local import/export/privacy controls.

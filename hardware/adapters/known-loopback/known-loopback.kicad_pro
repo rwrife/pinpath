@@ -1,0 +1,6 @@
+{
+  "board": {},
+  "meta": {"filename": "known-loopback.kicad_pro", "version": 1},
+  "schematic": {},
+  "text_variables": {"SAFETY_BOUNDARY": "Disconnected, de-energized passive assemblies only"}
+}
