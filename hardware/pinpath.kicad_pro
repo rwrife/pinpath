@@ -1,0 +1,20 @@
+{
+  "board": {},
+  "boards": [],
+  "cvpcb": {},
+  "erc": {},
+  "libraries": {},
+  "meta": {
+    "filename": "pinpath.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [],
+    "meta": {"version": 3}
+  },
+  "schematic": {},
+  "text_variables": {
+    "EVIDENCE_STATUS": "Static schematic analysis only; no fabricated or bench-tested hardware",
+    "SAFETY_BOUNDARY": "Disconnected, de-energized passive assemblies only"
+  }
+}

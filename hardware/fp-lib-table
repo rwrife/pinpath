@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PinPath")(type "KiCad")(uri "${KIPRJMOD}/pinpath.pretty")(options "")(descr "PinPath project-local verified footprints"))
+)

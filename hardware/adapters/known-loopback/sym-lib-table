@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PinPath")(type "KiCad")(uri "${KIPRJMOD}/../../pinpath.kicad_sym")(options "")(descr "PinPath custom symbols"))
+)

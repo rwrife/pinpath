@@ -6,7 +6,7 @@
 
 PinPath is planned as safe, repairable, open hardware for checking **disconnected, de-energized** passive cables and small wiring harnesses at a desk or workbench. Two configurable 16-position test banks connect through replaceable adapter boards or labeled flying leads. Firmware scans the conductors, reports the observed end-to-end map, and compares it with a user-selected expected map. A local desktop companion creates cable profiles and exports results.
 
-This repository now contains the frozen MVP requirements/architecture and a manufacturer-backed **rev-A candidate component selection** with checked static front-end calculations. It still does not contain a working schematic, PCB, firmware, app, validated/orderable BOM, ERC/DRC report, fabricated unit, or bench-test evidence. The candidate limits deliberately keep scanning unauthorized until physical characterization.
+This repository contains the frozen MVP requirements/architecture, a manufacturer-backed **rev-A candidate component selection**, and the editable rev-A carrier schematic plus source-of-truth BOM and clean native ERC evidence. It still does not contain a PCB layout, production/order validation, firmware, app, fabricated unit, or bench-test evidence. The candidate limits deliberately keep scanning unauthorized until physical characterization.
 
 ## Motivation
 
@@ -68,22 +68,22 @@ All status must be conveyed with text/icon shape in addition to color. The app m
 ## Planned repository layout
 
 ```text
-hardware/pinpath.kicad_pro    # planned editable KiCad project; not created yet
-hardware/pinpath.kicad_sch    # planned editable schematic; not created yet
-hardware/pinpath.kicad_pcb    # planned editable carrier PCB; not created yet
-hardware/adapters/            # planned editable adapter-board sources
+hardware/pinpath.kicad_pro    # editable rev-A carrier project
+hardware/pinpath.kicad_sch    # editable carrier schematic and BOM source of truth
+hardware/pinpath.kicad_pcb    # planned carrier PCB; issue #4
+hardware/adapters/            # known-loopback electrical definition; PCB adapters planned
 hardware/selection/           # rev-A candidate parts, evidence, calculations, and unvalidated limits
 firmware/                     # planned RP2040 firmware
 app/                          # planned local desktop companion
-bom/preliminary-bom.csv       # planning-only candidates
-bom/bom.csv                   # future schematic-derived tracked BOM
+bom/bom.csv                   # schematic-derived tracked BOM
+bom/non-schematic-items.csv   # cables, contacts, tools, and mechanical items
 ```
 
-Final BOM data belongs in **KiCad schematic symbol properties** (including Manufacturer and MPN) and will be exported to tracked `bom/bom.csv`. The preliminary CSV is not an orderable BOM.
+Final BOM data belongs in **KiCad schematic symbol properties** (including Manufacturer and MPN) and is exported to tracked `bom/bom.csv`. The preliminary CSV remains planning history; neither file is an order or a claim of current stock/price validation.
 
 ## Current status and milestones
 
-- **Now:** frozen MVP requirements/architecture plus rev-A candidate component selection and static calculations; schematic and physical validation remain pending
+- **Now:** frozen MVP requirements/architecture, rev-A candidate component selection, editable carrier schematic, clean native ERC, and schematic-derived BOM; PCB and all physical validation remain pending
 - **M1:** requirements, risk analysis, and adapter/test architecture
 - **M2:** datasheet-backed component selection, editable KiCad schematic, and clean/documented ERC
 - **M3:** PCB, DRC, firmware, protocol, and simulated fixture tests
@@ -92,13 +92,15 @@ Final BOM data belongs in **KiCad schematic symbol properties** (including Manuf
 
 ## Development quickstart
 
-No application, KiCad design, or fabricated hardware exists yet. Current repeatable static checks are:
+The current repeatable static checks are:
 
 ```bash
 python3 tools/verify_requirements.py
 python3 hardware/selection/calculate_frontend.py --output hardware/selection/front-end-analysis.json
 python3 -m unittest discover -s hardware/selection -p 'test_*.py' -v
 python3 tools/verify_component_selection.py
+python3 tools/verify_schematic.py
+kicad-cli sch erc hardware/pinpath.kicad_sch --severity-all --exit-code-violations -o hardware/reports/pinpath-erc.rpt
 ```
 
 After implementation skeletons land, expected commands are:

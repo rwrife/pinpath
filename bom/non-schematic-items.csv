@@ -1,0 +1,7 @@
+Status,Item,Quantity,Manufacturer,MPN,Source URL,Estimated Unit Cost USD,Notes
+SELECTED_STATIC_ONLY,Bank mating housing,2,"Molex, LLC",43025-1600,https://www.molex.com/en-us/products/part-detail/430251600,UNKNOWN,One per bank cable or adapter; do not double-order per adapter BOM.
+SELECTED_WITH_STOCK_GAP,Bank crimp terminals,32,"Molex, LLC",43030-0007,https://www.molex.com/en-us/products/part-detail/430300007,UNKNOWN,20-24 AWG loose contacts; wire gauge tooling and authorized stock must be confirmed before order.
+SELECTED_NON_SCHEMATIC,Local SWD debug probe,1,Raspberry Pi Ltd,SC0889,https://www.digikey.com/en/products/detail/raspberry-pi/SC0889/17877576,UNKNOWN,Bring-up tool not included on every assembled unit; Cortex-header adapter cable remains required.
+PLANNING_ONLY,USB data cable,1,TBD,TBD,TBD,UNKNOWN,Micro-USB data cable; never connect powered USB through a test bank.
+PLANNING_ONLY,Enclosure and fasteners,1,TBD,TBD,TBD,UNKNOWN,Issue #4/#7 mechanical selection; no cost fit stock or validation claim.
+PLANNING_ONLY,Debug adapter cable,1,TBD,TBD,TBD,UNKNOWN,Mate SC0889 or another SWD probe to J3 after connector pinout and cable are reviewed.
