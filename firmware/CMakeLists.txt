@@ -1,12 +1,26 @@
 cmake_minimum_required(VERSION 3.21)
+
+option(PINPATH_BUILD_FIRMWARE "Build RP2040 firmware target" ON)
+option(PINPATH_BUILD_TESTS "Build host tests" ON)
+
+if(PINPATH_BUILD_FIRMWARE)
+  if(NOT DEFINED PICO_SDK_PATH)
+    set(PICO_SDK_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/pico-sdk")
+  endif()
+
+  if(NOT EXISTS "${PICO_SDK_PATH}/external/pico_sdk_import.cmake")
+    message(FATAL_ERROR "Pico SDK not found at ${PICO_SDK_PATH}. Initialize submodule: git submodule update --init --recursive third_party/pico-sdk")
+  endif()
+
+  # Must be included before project() so toolchains resolve correctly.
+  include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+endif()
+
 project(pinpath_firmware LANGUAGES C CXX ASM)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-option(PINPATH_BUILD_FIRMWARE "Build RP2040 firmware target" ON)
-option(PINPATH_BUILD_TESTS "Build host tests" ON)
 
 add_library(pinpath_core STATIC
   src/pinpath_core.cpp
@@ -27,15 +41,6 @@ if(PINPATH_BUILD_TESTS)
 endif()
 
 if(PINPATH_BUILD_FIRMWARE)
-  if(NOT DEFINED PICO_SDK_PATH)
-    set(PICO_SDK_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/pico-sdk")
-  endif()
-
-  if(NOT EXISTS "${PICO_SDK_PATH}/external/pico_sdk_import.cmake")
-    message(FATAL_ERROR "Pico SDK not found at ${PICO_SDK_PATH}. Initialize submodule: git submodule update --init --recursive third_party/pico-sdk")
-  endif()
-
-  include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
   pico_sdk_init()
 
   add_executable(pinpath_firmware src/main.cpp)
