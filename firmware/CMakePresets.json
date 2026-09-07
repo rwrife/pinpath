@@ -1,0 +1,28 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "host-tests",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build-host",
+      "cacheVariables": {
+        "PINPATH_BUILD_FIRMWARE": "OFF",
+        "PINPATH_BUILD_TESTS": "ON"
+      }
+    },
+    {
+      "name": "rp2040-release",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build-pico",
+      "cacheVariables": {
+        "PINPATH_BUILD_FIRMWARE": "ON",
+        "PINPATH_BUILD_TESTS": "OFF"
+      }
+    }
+  ]
+}
