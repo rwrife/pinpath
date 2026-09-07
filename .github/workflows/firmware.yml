@@ -33,8 +33,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            cmake ninja-build gcc-arm-none-eabi g++-arm-none-eabi \
-            libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
+            cmake ninja-build gcc-arm-none-eabi \
+            libnewlib-arm-none-eabi libstdc++-arm-none-eabi-dev libstdc++-arm-none-eabi-newlib
 
       - name: Configure firmware
         run: cmake -S firmware -B firmware/build-pico -DPINPATH_BUILD_FIRMWARE=ON -DPINPATH_BUILD_TESTS=OFF
