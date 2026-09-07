@@ -1,0 +1,8 @@
+{
+  "instrument": "DMM model + calibration date",
+  "setup": "fixture wiring, adapter revision, power source",
+  "conditions": "ambient temperature/humidity notes",
+  "hardware_revision": "pinpath-rev-a-candidate",
+  "operator": "initials",
+  "notes": "Populate this record before claiming bench evidence context"
+}

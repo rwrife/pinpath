@@ -1,0 +1,52 @@
+name: firmware
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure host tests
+        run: cmake -S firmware -B firmware/build-host -DPINPATH_BUILD_FIRMWARE=OFF -DPINPATH_BUILD_TESTS=ON
+
+      - name: Build host tests
+        run: cmake --build firmware/build-host -j
+
+      - name: Run host tests
+        run: ctest --test-dir firmware/build-host --output-on-failure
+
+  rp2040-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            cmake ninja-build gcc-arm-none-eabi \
+            libnewlib-arm-none-eabi libstdc++-arm-none-eabi-dev libstdc++-arm-none-eabi-newlib
+
+      - name: Configure firmware
+        run: cmake -S firmware -B firmware/build-pico -DPINPATH_BUILD_FIRMWARE=ON -DPINPATH_BUILD_TESTS=OFF
+
+      - name: Build firmware UF2
+        run: cmake --build firmware/build-pico -j --target pinpath_firmware
+
+      - name: Upload firmware artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pinpath-firmware-artifacts
+          path: |
+            firmware/build-pico/*.uf2
+            firmware/build-pico/*.elf
+            firmware/build-pico/*.map

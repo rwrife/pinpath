@@ -19,6 +19,7 @@ __pycache__/
 
 # Firmware build artifacts
 firmware/build/
+firmware/build-*/
 firmware/.cache/
 *.uf2
 *.elf
