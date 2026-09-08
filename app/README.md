@@ -1,33 +1,69 @@
-# Companion app plan
+# PinPath companion app
 
-## Responsibilities
+Local desktop companion for the PinPath de-energized cable/harness tester.
 
-The local desktop companion will discover a user-selected PinPath serial device, guide safe setup, create expected cable profiles, render the observed 16×16 map, compare results, retain optional history, and export reports. It must keep unsafe operations unavailable after a device fault or failed precheck.
+## Safety boundary (hard requirement)
 
-PinPath is only for disconnected, de-energized passive assemblies. The app shall not enable or imply mains, PoE, battery or battery-pack, powered USB through a test bank, vehicle, medical, life-safety, energized-circuit, or cable certification use.
+PinPath is for **disconnected, de-energized passive assemblies only**. The app must not be used for or interpreted as support for mains, PoE, batteries/battery packs, powered USB test banks, automotive harnesses connected to vehicle power, medical/life-safety wiring, energized-circuit probing, or certification testing.
 
-## Target platforms and framework
+If precheck fails, scan faults, reset events, malformed frames, or user cancellation occur, the workflow returns to safe idle and requires a fresh precheck token before another scan.
 
-Tauri 2 with a Rust service boundary and TypeScript UI, targeting Windows 10/11, macOS, and Linux. Platform serial adapters remain isolated behind a testable interface. Exact packaging and signing support will be validated per OS.
+## Stack and pinned tooling
 
-## Setup flow
+- TypeScript `5.6.3`
+- React `18.3.1`
+- Vite `5.4.8`
+- Vitest `2.1.1`
+- ESLint `9.10.0`
+- Tauri `2.0.1` (`@tauri-apps/cli` + Rust crate)
+- Rust `1.98.0`
+- SQLite via `rusqlite` with bundled SQLite
 
-1. Show the safety limits before first use and when hardware revision/limits change.
-2. Ask the user to connect PinPath over USB; no background scanning before consent.
-3. Verify protocol/hardware compatibility and offer fixture self-test.
-4. Create/import an expected map or choose unknown-cable mapping.
-5. Start/cancel the scan and review/export results.
+## Features implemented
 
-## Data ownership and privacy
+- User-initiated USB discovery/connection (mock adapter first) with strict protocol/hardware compatibility gate.
+- Precheck token workflow: scan is rejected unless precheck was run immediately beforehand.
+- Unknown mapping and expected-profile comparison.
+- Deterministic classification into match/open/short/crossover/unstable/unknown.
+- Accessible, non-color-only 16×16 matrix rendering (`✓ O S X ! ?` text indicators plus color).
+- Local profile/report persistence with SQLite migrations in Tauri runtime.
+- Deletion controls for profiles/reports.
+- Versioned JSON backup/restore and CSV report export.
+- Serial frame validation with strict schema/limits, duplicate-key rejection, bounded sizes/depth, and sanitized user-visible/exported text.
+- No account, telemetry, background network service, ad SDK, or cloud dependency.
 
-Profiles and reports are stored locally in SQLite. Versioned JSON supports complete backup/restore; CSV supports human-readable result export. The app has no account, telemetry, ads, cloud API, or required network permission. USB and filesystem access are requested only for explicit device or import/export actions. Users can delete individual reports or all local data.
+## Commands (reproducible)
 
-## Accessibility
+From `app/`:
 
-Keyboard-only operation, screen-reader names and announcements, scalable typography, non-color-only map states, high contrast, reduced motion, and clear focus order are MVP acceptance criteria.
+```bash
+npm ci
+npm run lint
+npm run test:ci
+npm run a11y
+npm run build
+npm run tauri:build
+```
 
-## Protocol boundary
+## CI
 
-The app treats all serial input as untrusted and enforces schema, version, identifier, range, size, and state-transition checks. It never interprets device text as code or shell input. See the normative [`docs/protocol.md`](../docs/protocol.md), connectivity/report semantics in [`docs/architecture.md`](../docs/architecture.md), and evidence split in [`docs/verification-matrix.md`](../docs/verification-matrix.md).
+`/.github/workflows/app.yml` runs:
 
-No application skeleton, build, test, package, or live-device result exists yet.
+1. `npm ci`
+2. `npm run lint`
+3. `npm run test:ci`
+4. `npm run a11y`
+5. `npm run build`
+6. unsigned Tauri debug package build
+
+## USB permissions by OS (development baseline)
+
+- **Linux:** add udev rule for the adapter VID/PID and replug the device.
+- **macOS:** no custom driver expected for CDC, but app needs user-granted USB/serial access if prompted.
+- **Windows:** ensure WinUSB/CDC driver is present; first plug may require elevation/admin policy depending on enterprise controls.
+
+Detailed operational notes live in `docs/usb-permissions.md`.
+
+## Unsigned development artifacts
+
+Current package outputs are unsigned development artifacts only. Signing/notarization remains a later milestone and is not claimed in this repository state.

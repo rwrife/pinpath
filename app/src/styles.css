@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  font-size: clamp(16px, 1rem + 0.2vw, 20px);
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding: 1rem;
+}
+
+.boundary {
+  border-inline-start: 0.3rem solid #b45309;
+  padding-inline-start: 0.75rem;
+}
+
+section {
+  margin-block: 1.25rem;
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.grid-2 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+label {
+  display: grid;
+  gap: 0.25rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+button,
+select,
+input,
+textarea {
+  border-radius: 0.35rem;
+  border: 1px solid currentColor;
+  padding: 0.3rem 0.5rem;
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(1.5rem, 1fr));
+  gap: 0.1rem;
+  max-width: 36rem;
+}
+
+.cell {
+  border: 1px solid currentColor;
+  min-height: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.cell.pass {
+  background: #14532d;
+  color: #f0fdf4;
+}
+
+.cell.open {
+  background: #7c2d12;
+  color: #fff7ed;
+}
+
+.cell.short {
+  background: #7f1d1d;
+  color: #fef2f2;
+}
+
+.cell.crossover {
+  background: #312e81;
+  color: #eef2ff;
+}
+
+.cell.unstable {
+  background: #92400e;
+  color: #fffbeb;
+}
+
+.cell.unknown {
+  background: #334155;
+  color: #f8fafc;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 0.5rem;
+}
+
+.status {
+  min-height: 2.5rem;
+  padding: 0.5rem;
+  border: 1px solid currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .cell {
+    border: 1px solid CanvasText;
+  }
+}
