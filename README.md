@@ -6,7 +6,7 @@
 
 PinPath is planned as safe, repairable, open hardware for checking **disconnected, de-energized** passive cables and small wiring harnesses at a desk or workbench. Two configurable 16-position test banks connect through replaceable adapter boards or labeled flying leads. Firmware scans the conductors, reports the observed end-to-end map, and compares it with a user-selected expected map. A local desktop companion creates cable profiles and exports results.
 
-This repository contains the frozen MVP requirements/architecture, a manufacturer-backed **rev-A candidate component selection**, and the editable rev-A carrier schematic plus source-of-truth BOM and clean native ERC evidence. It still does not contain a PCB layout, production/order validation, firmware, app, fabricated unit, or bench-test evidence. The candidate limits deliberately keep scanning unauthorized until physical characterization.
+This repository contains the frozen MVP requirements/architecture, a manufacturer-backed **rev-A candidate component selection**, and the editable rev-A carrier schematic plus source-of-truth BOM and clean native ERC evidence. It now also contains an initial Tauri 2 companion-app implementation with deterministic mock-protocol tests, local SQLite persistence boundary, accessibility checks, and CI. It still does not contain a completed PCB layout, production/order validation, fabricated unit, or bench-test evidence. The candidate limits deliberately keep scanning unauthorized until physical characterization.
 
 ## Motivation
 
@@ -74,7 +74,7 @@ hardware/pinpath.kicad_pcb    # planned carrier PCB; issue #4
 hardware/adapters/            # known-loopback electrical definition; PCB adapters planned
 hardware/selection/           # rev-A candidate parts, evidence, calculations, and unvalidated limits
 firmware/                     # planned RP2040 firmware
-app/                          # planned local desktop companion
+app/                          # Tauri 2 desktop companion (Rust + TypeScript)
 bom/bom.csv                   # schematic-derived tracked BOM
 bom/non-schematic-items.csv   # cables, contacts, tools, and mechanical items
 ```
@@ -83,7 +83,7 @@ Final BOM data belongs in **KiCad schematic symbol properties** (including Manuf
 
 ## Current status and milestones
 
-- **Now:** frozen MVP requirements/architecture, rev-A candidate component selection, editable carrier schematic, clean native ERC, and schematic-derived BOM; PCB and all physical validation remain pending
+- **Now:** frozen MVP requirements/architecture, rev-A candidate component selection, editable carrier schematic, clean native ERC, schematic-derived BOM, and a first desktop companion skeleton with lint/tests/a11y/build/unsigned-package CI; PCB and physical validation remain pending
 - **M1:** requirements, risk analysis, and adapter/test architecture
 - **M2:** datasheet-backed component selection, editable KiCad schematic, and clean/documented ERC
 - **M3:** PCB, DRC, firmware, protocol, and simulated fixture tests
@@ -111,14 +111,17 @@ cmake -S firmware -B firmware/build
 cmake --build firmware/build
 ctest --test-dir firmware/build
 
-# Desktop app (planned; Rust + Tauri + TypeScript)
+# Desktop app (current baseline)
 cd app
 npm ci
-npm test
-npm run tauri build
+npm run lint
+npm run test:ci
+npm run a11y
+npm run build
+npm run tauri:build
 ```
 
-Those firmware/app commands are architectural targets, not current passing results. See [PLAN.md](PLAN.md), [system requirements](hardware/requirements.md), [architecture](docs/architecture.md), [risk analysis](docs/risk-analysis.md), [verification matrix](docs/verification-matrix.md), and the issue backlog for the implementation sequence.
+The firmware commands remain architectural targets. The app commands are now wired in CI and pass locally on this branch. See [PLAN.md](PLAN.md), [system requirements](hardware/requirements.md), [architecture](docs/architecture.md), [risk analysis](docs/risk-analysis.md), [verification matrix](docs/verification-matrix.md), [app/README.md](app/README.md), and [docs/usb-permissions.md](docs/usb-permissions.md) for status and limitations.
 
 ## Licensing
 

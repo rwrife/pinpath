@@ -1,0 +1,48 @@
+{
+  "name": "pinpath-companion",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --max-warnings=0",
+    "test": "vitest",
+    "test:ci": "vitest run",
+    "test:a11y": "vitest run src/test/accessibility.test.tsx",
+    "a11y": "npm run test:a11y",
+    "preview": "vite preview",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build --debug"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "2.0.1",
+    "jsonc-parser": "3.3.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.11.1",
+    "@tauri-apps/cli": "2.0.1",
+    "@testing-library/jest-dom": "6.6.3",
+    "@testing-library/react": "16.0.1",
+    "@testing-library/user-event": "14.5.2",
+    "@types/jest-axe": "^3.5.9",
+    "@types/node": "22.7.4",
+    "@types/react": "18.3.10",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "8.8.1",
+    "@typescript-eslint/parser": "8.8.1",
+    "@vitejs/plugin-react": "4.3.2",
+    "eslint": "9.11.1",
+    "eslint-plugin-react-hooks": "5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "0.4.12",
+    "jest-axe": "9.0.0",
+    "jsdom": "25.0.1",
+    "typescript": "5.6.2",
+    "typescript-eslint": "8.8.1",
+    "vite": "5.4.8",
+    "vitest": "2.1.2"
+  }
+}

@@ -45,7 +45,7 @@ Build a bench-top, USB-powered tester for disconnected passive cables and harnes
 3. **Schematic-stage complete:** create the real KiCad project and schematic, export the BOM, run ERC, and review pin mapping. PCB/physical validation is not implied.
 4. Lay out the carrier and first adapter, run DRC/analyzers, and inspect fabrication geometry.
 5. Build firmware plus host simulation/classifier tests and reproducible flashing/recovery.
-6. Build the desktop companion and local import/export/privacy controls.
+6. Build the desktop companion and local import/export/privacy controls (baseline scaffold now implemented in `app/`, with deterministic mock-protocol tests and CI packaging checks).
 7. Integrate on fabricated hardware; record precheck thresholds, scan behavior, expected measurements, and limitations.
 8. Publish assembly instructions, troubleshooting, inspected manufacturing outputs, licenses, and a versioned release archive.
 
