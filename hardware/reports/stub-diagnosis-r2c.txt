@@ -1,0 +1,7 @@
+
+== Pad 2 [/SENSE_HI_EN] of U9 on F.Cu | Track [/SENSE_HI_EN] on B.Cu, length 1.4049 mm
+   A@(66.54,51.98) B@(42.92,65.00)
+   xseg F.Cu: track /+3V3 @(64.79,53.27) | ring@dst: track /DRV_A_HI_EN @(41.11,66.01)
+   xseg B.Cu: via /+3V3 @(64.96,53.44) | ring@dst: pad U9.1 [/MUX_A0] @(66.54,51.33)
+   L-elbow (66.54,65.00): ring;seg1:track /+3V3 @(65.88,58.19);seg2:track /BIAS @(52.88,63.88)
+   L-elbow (42.92,51.98): ring;seg1:track /A:12_NODE @(44.73,51.86);seg2:track /MUX_A1 @(44.98,52.60)

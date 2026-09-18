@@ -44,13 +44,23 @@ Current schematic-stage sources and evidence are:
 
 - `hardware/pinpath.kicad_pro`
 - `hardware/pinpath.kicad_sch`
+- `hardware/pinpath.kicad_pcb` (rev-A carrier layout candidate; see [PCB layout evidence](PCB-layout-evidence.md) for DRC status, residuals, and fab-candidate posture)
 - `hardware/pinpath.kicad_sym`
 - `hardware/pinpath.pretty/RaspberryPi_Pico_SMD_HandSolder.kicad_mod`
+- `hardware/TestPoint.pretty/` (project-local micro test points)
 - `hardware/schematic-pinout-evidence.md`
+- `hardware/PCB-layout-evidence.md`
 - `hardware/reports/pinpath-erc.rpt`
+- `hardware/reports/drc-20260918-final.json` (0 errors; adjudicated warnings)
 - `hardware/reports/pinpath-schematic.pdf` (review supplement, not source)
+- `hardware/fab-out/pinpath-gerbers/` + `fab-out/gerber-inspection.json` (inspected release-candidate fabrication outputs)
 - `hardware/adapters/known-loopback/` (passive one-to-one electrical fixture definition)
 - `bom/bom.csv` (native export from schematic properties)
 - `bom/non-schematic-items.csv`
 
-The carrier PCB `hardware/pinpath.kicad_pcb`, physical adapter layout, DRC, and fabrication inspection remain issue #4 work. Final Manufacturer/MPN/source data lives in schematic symbol properties and exports to tracked `bom/bom.csv`; volatile costs remain explicitly `UNKNOWN` until dated supplier evidence is obtained.
+The carrier PCB now exists as a layout candidate with 0-error native DRC;
+the single remaining stub, pour-island residual, and adapter cable-assembly
+decision are adjudicated in [PCB layout evidence](PCB-layout-evidence.md).
+Final Manufacturer/MPN/source data lives in schematic symbol properties and
+exports to tracked `bom/bom.csv`; volatile costs remain explicitly `UNKNOWN`
+until dated supplier evidence is obtained.

@@ -1,0 +1,71 @@
+zone fill layer F.Cu islands 66
+stitch F.Cu island 0 area_mm2 356.91 via @ 23.4 62.4
+stitch F.Cu island 1 area_mm2 2088.24 via @ 68.2 59.0
+stitch F.Cu island 2 area_mm2 86.57 via @ 74.8 66.2
+stitch F.Cu island 3 area_mm2 53.54 via @ 62.6 64.4
+stitch F.Cu island 4 area_mm2 9.01 via @ 43.4 66.2
+stitch F.Cu island 5 area_mm2 4.53 via @ 35.0 65.6
+stitch F.Cu island 6 area_mm2 9.78 via @ 38.2 62.2
+stitch F.Cu island 7 area_mm2 15.3 via @ 48.8 61.6
+stitch F.Cu island 8 area_mm2 4.81 via @ 34.8 62.8
+stitch F.Cu island 9 area_mm2 4.28 via @ 30.8 62.8
+stitch F.Cu island 10 area_mm2 2.92 via @ 42.6 62.6
+stitch F.Cu island 11 area_mm2 4.67 via @ 63.4 59.8
+stitch F.Cu island 12 area_mm2 6.01 via @ 32.2 59.0
+stitch F.Cu island 13 area_mm2 20.29 via @ 54.8 58.0
+stitch F.Cu island 14 area_mm2 12.78 via @ 36.2 58.0
+stitch F.Cu island 15 area_mm2 4.58 via @ 28.4 58.2
+stitch F.Cu island 16 area_mm2 5.11 via @ 30.6 53.4
+stitch F.Cu island 17 area_mm2 5.91 via @ 68.8 52.6
+LEFT island 18 layer F.Cu area_mm2 2.54 bbox 0.5 0.5 95.5 75.5
+LEFT island 19 layer F.Cu area_mm2 1.98 bbox 0.5 0.5 95.5 75.5
+stitch F.Cu island 20 area_mm2 4.44 via @ 61.2 52.8
+stitch F.Cu island 21 area_mm2 2.35 via @ 58.8 52.8
+stitch F.Cu island 22 area_mm2 3.96 via @ 44.2 52.6
+stitch F.Cu island 23 area_mm2 7.54 via @ 24.2 50.2
+stitch F.Cu island 24 area_mm2 5.37 via @ 68.6 47.0
+stitch F.Cu island 25 area_mm2 7.94 via @ 41.4 44.6
+stitch F.Cu island 26 area_mm2 2.92 via @ 64.6 45.2
+stitch F.Cu island 27 area_mm2 3.78 via @ 58.8 45.4
+LEFT island 28 layer F.Cu area_mm2 1.26 bbox 0.5 0.5 95.5 75.5
+LEFT island 29 layer F.Cu area_mm2 1.18 bbox 0.5 0.5 95.5 75.5
+LEFT island 30 layer F.Cu area_mm2 0.74 bbox 0.5 0.5 95.5 75.5
+LEFT island 31 layer F.Cu area_mm2 0.65 bbox 0.5 0.5 95.5 75.5
+LEFT island 32 layer F.Cu area_mm2 7.05 bbox 0.5 0.5 95.5 75.5
+stitch F.Cu island 33 area_mm2 9.29 via @ 33.2 43.4
+LEFT island 34 layer F.Cu area_mm2 1.11 bbox 0.5 0.5 95.5 75.5
+LEFT island 35 layer F.Cu area_mm2 0.73 bbox 0.5 0.5 95.5 75.5
+LEFT island 36 layer F.Cu area_mm2 3.83 bbox 0.5 0.5 95.5 75.5
+LEFT island 37 layer F.Cu area_mm2 2.38 bbox 0.5 0.5 95.5 75.5
+stitch F.Cu island 38 area_mm2 13.75 via @ 49.4 36.4
+stitch F.Cu island 39 area_mm2 24.82 via @ 36.6 36.8
+LEFT island 40 layer F.Cu area_mm2 0.51 bbox 0.5 0.5 95.5 75.5
+LEFT island 41 layer F.Cu area_mm2 3.15 bbox 0.5 0.5 95.5 75.5
+stitch F.Cu island 42 area_mm2 24.9 via @ 53.0 33.0
+stitch F.Cu island 43 area_mm2 18.46 via @ 64.0 33.2
+stitch F.Cu island 44 area_mm2 7.41 via @ 40.6 33.2
+stitch F.Cu island 45 area_mm2 12.58 via @ 60.2 33.0
+stitch F.Cu island 46 area_mm2 6.19 via @ 46.6 33.0
+stitch F.Cu island 47 area_mm2 5.99 via @ 37.0 31.0
+stitch F.Cu island 48 area_mm2 2.24 via @ 77.2 31.8
+stitch F.Cu island 49 area_mm2 7.29 via @ 50.0 31.8
+stitch F.Cu island 50 area_mm2 7.9 via @ 78.4 29.6
+stitch F.Cu island 51 area_mm2 19.59 via @ 64.4 28.8
+stitch F.Cu island 52 area_mm2 6.58 via @ 39.0 29.0
+stitch F.Cu island 53 area_mm2 11.03 via @ 43.2 28.8
+stitch F.Cu island 54 area_mm2 7.05 via @ 70.4 25.2
+stitch F.Cu island 55 area_mm2 9.04 via @ 26.6 27.0
+stitch F.Cu island 56 area_mm2 6.31 via @ 32.0 27.2
+LEFT island 57 layer F.Cu area_mm2 3.43 bbox 0.5 0.5 95.5 75.5
+stitch F.Cu island 58 area_mm2 6.02 via @ 58.6 27.4
+stitch F.Cu island 59 area_mm2 8.3 via @ 36.8 26.8
+stitch F.Cu island 60 area_mm2 4.85 via @ 54.0 26.8
+stitch F.Cu island 61 area_mm2 11.22 via @ 50.0 27.4
+stitch F.Cu island 62 area_mm2 11.5 via @ 79.4 26.2
+stitch F.Cu island 63 area_mm2 6.14 via @ 39.8 26.8
+stitch F.Cu island 64 area_mm2 5.0 via @ 62.8 23.2
+stitch F.Cu island 65 area_mm2 6.87 via @ 46.2 25.4
+zone fill layer B.Cu islands 1
+stitch B.Cu island 0 area_mm2 5.66 via @ 85.47 25.37
+placed 53 left 14
+saved

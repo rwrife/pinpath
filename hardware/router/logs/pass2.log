@@ -1,0 +1,62 @@
+2026-09-17 06:04:33.166 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+2026-09-17 06:04:33.207 WARN   Unknown command line argument: -gui.enabled=false
+2026-09-17 06:04:33.207 WARN   Couldn't get screen resolution. If you are running in a headless environment, disable the GUI by setting gui.enabled to false.
+2026-09-17 06:04:34.553 INFO   [979EEE\207003] Loading board file 'pp17-pass2.dsn'...
+2026-09-17 06:04:34.923 INFO   [979EEE\207003] Job '979EEE\207003' started at 2026-09-17T06:04:34.923085030Z.
+2026-09-17 06:04:35.521 INFO   [979EEE\207003] Auto-routing stage started on board 'b5740e3c11f01a82802443881da51cf0' for 15 unrouted items.
+2026-09-17 06:04:53.674 INFO   [979EEE\207003] Auto-routing pass #1 on board 'b5740e3c11f01a82802443881da51cf0' was completed in 15.78 seconds with score 968.46 (14 unrouted and 0 violations), using 17.53 CPU seconds and the job allocated 97.94 GB of memory so far.
+2026-09-17 06:05:08.916 INFO   [979EEE\207003] Auto-routing pass #2 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 12.55 seconds with score 968.46 (14 unrouted and 0 violations), using 32.18 CPU seconds and the job allocated 185.16 GB of memory so far.
+2026-09-17 06:05:22.977 INFO   [979EEE\207003] Auto-routing pass #3 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 12.73 seconds with score 968.46 (14 unrouted and 0 violations), using 46.85 CPU seconds and the job allocated 273.02 GB of memory so far.
+2026-09-17 06:05:32.704 INFO   [979EEE\207003] Auto-routing pass #4 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 8.51 seconds with score 968.46 (14 unrouted and 0 violations), using 55.60 CPU seconds and the job allocated 342.97 GB of memory so far.
+2026-09-17 06:05:39.674 INFO   [979EEE\207003] Auto-routing pass #5 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.24 seconds with score 968.46 (14 unrouted and 0 violations), using 62.35 CPU seconds and the job allocated 414.52 GB of memory so far.
+2026-09-17 06:05:46.468 INFO   [979EEE\207003] Auto-routing pass #6 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.12 seconds with score 968.46 (14 unrouted and 0 violations), using 69.10 CPU seconds and the job allocated 489.10 GB of memory so far.
+2026-09-17 06:05:53.295 INFO   [979EEE\207003] Auto-routing pass #7 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.16 seconds with score 968.46 (14 unrouted and 0 violations), using 75.85 CPU seconds and the job allocated 562.39 GB of memory so far.
+2026-09-17 06:06:00.049 INFO   [979EEE\207003] Auto-routing pass #8 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.06 seconds with score 968.46 (14 unrouted and 0 violations), using 82.59 CPU seconds and the job allocated 636.66 GB of memory so far.
+2026-09-17 06:06:06.861 INFO   [979EEE\207003] Auto-routing pass #9 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.12 seconds with score 968.46 (14 unrouted and 0 violations), using 88.39 CPU seconds and the job allocated 701.10 GB of memory so far.
+2026-09-17 06:06:13.651 INFO   [979EEE\207003] Auto-routing pass #10 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.10 seconds with score 968.46 (14 unrouted and 0 violations), using 95.14 CPU seconds and the job allocated 775.27 GB of memory so far.
+2026-09-17 06:06:20.320 INFO   [979EEE\207003] Auto-routing pass #11 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.00 seconds with score 968.46 (14 unrouted and 0 violations), using 101.91 CPU seconds and the job allocated 850.27 GB of memory so far.
+2026-09-17 06:06:27.096 INFO   [979EEE\207003] Auto-routing pass #12 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.10 seconds with score 968.46 (14 unrouted and 0 violations), using 108.66 CPU seconds and the job allocated 924.45 GB of memory so far.
+2026-09-17 06:06:39.164 INFO   [979EEE\207003] Auto-routing pass #13 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 11.40 seconds with score 968.46 (14 unrouted and 0 violations), using 120.39 CPU seconds and the job allocated 1003.66 GB of memory so far.
+2026-09-17 06:06:51.645 INFO   [979EEE\207003] Auto-routing pass #14 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 11.09 seconds with score 968.46 (14 unrouted and 0 violations), using 132.14 CPU seconds and the job allocated 1077.73 GB of memory so far.
+2026-09-17 06:07:01.628 INFO   [979EEE\207003] Auto-routing pass #15 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 8.71 seconds with score 968.46 (14 unrouted and 0 violations), using 141.88 CPU seconds and the job allocated 1151.87 GB of memory so far.
+2026-09-17 06:07:08.490 INFO   [979EEE\207003] Auto-routing pass #16 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.18 seconds with score 968.46 (14 unrouted and 0 violations), using 148.62 CPU seconds and the job allocated 1225.43 GB of memory so far.
+2026-09-17 06:07:15.328 INFO   [979EEE\207003] Auto-routing pass #17 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.18 seconds with score 968.46 (14 unrouted and 0 violations), using 155.39 CPU seconds and the job allocated 1298.86 GB of memory so far.
+2026-09-17 06:07:22.258 INFO   [979EEE\207003] Auto-routing pass #18 on board '4e8413003edfb21e4080c39320ba88c1' was completed in 6.24 seconds with score 968.46 (14 unrouted and 0 violations), using 162.16 CPU seconds and the job allocated 1371.74 GB of memory so far.
+2026-09-17 06:07:22.362 INFO   [979EEE\207003] The router's score (968.46) has not improved by more than 0.5 points in the last 10 passes (14 items still unconnected). Stopping the auto-router.
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net '/+3V3' (1 unrouted connection):
+    - D8-2  ->  D17-2
+  Net '/A:07_NODE' (1 unrouted connection):
+    - via  ->  via
+  Net '/A:10_NODE' (1 unrouted connection):
+    - via  ->  via
+  Net '/A:11_NODE' (1 unrouted connection):
+    - via  ->  R43-1
+  Net '/A:12_NODE' (1 unrouted connection):
+    - via  ->  R12-2
+  Net '/B:04_NODE' (1 unrouted connection):
+    - U4-7  ->  via
+  Net '/B:12_NODE' (1 unrouted connection):
+    - D39-4  ->  via
+  Net '/B:14_NODE' (1 unrouted connection):
+    - R30-2  ->  via
+  Net '/B:15_NODE' (1 unrouted connection):
+    - D31-3  ->  R63-1
+  Net '/DRV_A_HI_EN' (1 unrouted connection):
+    - R66-1  ->  via
+  Net '/DRV_B_HI_EN' (1 unrouted connection):
+    - via  ->  via
+  Net '/SENSE_B' (1 unrouted connection):
+    - via  ->  U9-8
+  Net '/SENSE_HI_EN' (1 unrouted connection):
+    - U9-2  ->  via
+  Net '/START_CANCEL_N' (1 unrouted connection):
+    - SW1-1  ->  R76-2
+2026-09-17 06:07:23.676 INFO   [979EEE\207003] Auto-routing stage completed: started with 15 unrouted nets, completed in 168.03 seconds, final score: 968.46 (14 unrouted and 0 violations), using 163.13 total CPU seconds, 1380.52 GB total allocated, and 949.9 MB peak heap usage.
+2026-09-17 06:07:24.290 INFO   [979EEE\207003] Optimization stage started on board '4e8413003edfb21e4080c39320ba88c1' with score 968.46 (14 unrouted and 0 violations).
+2026-09-17 06:07:27.654 INFO   [979EEE\207003] Optimizer pass #1 on board 'e10012ad637ae56c279058bf629397cc' was completed in 1.38 seconds with the score of 968.46 (14 unrouted and 0 violations).
+2026-09-17 06:07:28.253 INFO   [979EEE\207003] Stopping optimizer because the improvement in this pass (0.0000%) is below the threshold (1.00%).
+2026-09-17 06:07:28.906 INFO   [979EEE\207003] Optimization stage completed: started with score 968.46 (14 unrouted and 0 violations), completed in 3.97 seconds, final score: 968.46 (14 unrouted and 0 violations), using 3.85 total CPU seconds, 35.30 GB total allocated, and 902.7 MB peak heap usage.
+2026-09-17 06:07:28.947 INFO   [979EEE\207003] Job '979EEE\207003' finished with state: COMPLETED (elapsed: 2 minutes 54.02 seconds, finished at UTC: 2026-09-17T06:07:28.946311113Z).
+2026-09-17 06:07:29.426 INFO   Saving output file '/home/rwrife/repos/pinpath/.worktrees/issue-4-20260917/hardware/router/pp17-pass2.ses' (SES)...
+2026-09-17 06:07:29.428 INFO   Successfully saved output file '/home/rwrife/repos/pinpath/.worktrees/issue-4-20260917/hardware/router/pp17-pass2.ses' (367200 bytes).

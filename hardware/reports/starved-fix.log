@@ -1,0 +1,32 @@
+full-connect U4 3
+full-connect U4 14
+full-connect D14 1
+full-connect R65 2
+full-connect D37 2
+full-connect U1 13
+full-connect U1 23
+full-connect U1 33
+full-connect U1 38
+full-connect D4 1
+full-connect D40 2
+full-connect R66 2
+full-connect U5 3
+full-connect U6 3
+full-connect U6 14
+full-connect D36 2
+full-connect U7 3
+full-connect U7 14
+full-connect D2 1
+full-connect U2 3
+full-connect D34 2
+full-connect D35 2
+full-connect D7 1
+full-connect D29 1
+full-connect D3 1
+full-connect C6 2
+full-connect U9 3
+full-connect U9 14
+full-connect D13 1
+full-connect D42 1
+fixed 30
+saved

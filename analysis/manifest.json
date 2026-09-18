@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "project": "route-candidate.kicad_pro",
+  "current": "2026-09-17_0618",
+  "runs": {
+    "2026-09-17_0618": {
+      "source_hashes": {
+        "pinpath.kicad_sch": "sha256:432bf1ee13e942ab32fcb7f341d55491fa12e425d558c1193df1196a6b101fb1",
+        "route-candidate.kicad_pcb": "sha256:9fb3f103a805c3c5542042f8f2e315b91163cd2262470025135c9646af82c733",
+        "pinpath.kicad_pcb": "sha256:a2f73e1fd44e653446fdd418d017d858803454165b6c95e9a18d9db8b2e9213c",
+        "schematic.json": "sha256:0b13b59e89043aa4b4849954f3e48f5a4eec8d12a9433c133906512064bd038f",
+        "pcb.json": "sha256:469c10a93b7058938f8cf707a7b92923289860c2616303560151ed3349370dea"
+      },
+      "outputs": {
+        "schematic": "schematic.json",
+        "pcb": "pcb.json",
+        "cross_analysis": "cross_analysis.json",
+        "thermal": "thermal.json",
+        "emc": "emc.json"
+      },
+      "scripts": {
+        "schematic": "analyze_schematic.py pinpath.kicad_sch"
+      },
+      "generated": "2026-09-18T10:15:38+00:00",
+      "pinned": false
+    }
+  }
+}
