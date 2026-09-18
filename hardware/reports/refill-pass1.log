@@ -1,0 +1,19 @@
+06:02:21: Debug: Adding duplicate image handler for 'PNG file'
+06:02:21: Debug: Adding duplicate image handler for 'JPEG file'
+06:02:21: Debug: Adding duplicate image handler for 'TIFF file'
+06:02:21: Debug: Adding duplicate image handler for 'GIF file'
+06:02:21: Debug: Adding duplicate image handler for 'PNM file'
+06:02:21: Debug: Adding duplicate image handler for 'PCX file'
+06:02:21: Debug: Adding duplicate image handler for 'IFF file'
+06:02:21: Debug: Adding duplicate image handler for 'Windows icon file'
+06:02:21: Debug: Adding duplicate image handler for 'Windows cursor file'
+06:02:21: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+06:02:21: Debug: Adding duplicate image handler for 'TGA file'
+06:02:21: Debug: Adding duplicate image handler for 'XPM file'
+zone /GND filled_mm2 2909735234.5
+zone <rule-area> filled_mm2 0.0
+zone <rule-area> filled_mm2 0.0
+zone <rule-area> filled_mm2 0.0
+zone <rule-area> filled_mm2 0.0
+zone /GND filled_mm2 5659688.1
+saved hardware/route-candidate.kicad_pcb

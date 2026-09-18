@@ -4,7 +4,7 @@ Local desktop companion for the PinPath de-energized cable/harness tester.
 
 ## Safety boundary (hard requirement)
 
-PinPath is for **disconnected, de-energized passive assemblies only**. The app must not be used for or interpreted as support for mains, PoE, batteries/battery packs, powered USB test banks, automotive harnesses connected to vehicle power, medical/life-safety wiring, energized-circuit probing, or certification testing.
+PinPath is for **disconnected, de-energized passive assemblies only**. The app must not be used for or interpreted as support for mains, PoE, batteries/battery packs, powered USB test banks, automotive harnesses connected to vehicle power, medical/life-safety wiring, energized-circuit probing, or cable certification testing.
 
 If precheck fails, scan faults, reset events, malformed frames, or user cancellation occur, the workflow returns to safe idle and requires a fresh precheck token before another scan.
 

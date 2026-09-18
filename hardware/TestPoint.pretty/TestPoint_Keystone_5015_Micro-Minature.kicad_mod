@@ -1,0 +1,75 @@
+(footprint "TestPoint_Keystone_5015_Micro-Minature"
+	(version 20221018)
+	(generator "hermes")
+	(layer "F.Cu")
+	(descr "Fallback local footprint for Keystone 5015 micro-miniature test point")
+	(tags "testpoint keystone 5015")
+	(attr through_hole)
+	(fp_text reference "REF**"
+		(at 0 -2 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text value "TestPoint_Keystone_5015_Micro-Minature"
+		(at 0 2.2 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.4 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.55 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.2 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.9 1.9)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+	)
+	(model "${KICAD9_3DMODEL_DIR}/TestPoint.3dshapes/TestPoint_THTPad_D1.0mm_Drill0.5mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

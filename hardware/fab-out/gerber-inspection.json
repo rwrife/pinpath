@@ -1,0 +1,1182 @@
+{
+  "analyzer_type": "gerber",
+  "schema_version": "1.4.0",
+  "directory": "fab-out/pinpath-gerbers",
+  "generator": "Pcbnew 9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+  "layer_count": 2,
+  "board_dimensions": {
+    "width_mm": 96.05,
+    "height_mm": 76.05,
+    "area_mm2": 7304.6,
+    "source": "gbrjob"
+  },
+  "statistics": {
+    "gerber_files": 9,
+    "drill_files": 1,
+    "total_holes": 431,
+    "total_flashes": 2480,
+    "total_draws": 18520
+  },
+  "completeness": {
+    "found_layers": [
+      "B.Cu",
+      "B.Mask",
+      "B.Paste",
+      "B.SilkS",
+      "Edge.Cuts",
+      "F.Cu",
+      "F.Mask",
+      "F.Paste",
+      "F.SilkS"
+    ],
+    "expected_layers": [
+      "B.Cu",
+      "B.Mask",
+      "B.Paste",
+      "B.SilkS",
+      "Edge.Cuts",
+      "F.Cu",
+      "F.Mask",
+      "F.Paste",
+      "F.SilkS"
+    ],
+    "missing": [],
+    "extra": [],
+    "has_pth_drill": true,
+    "has_npth_drill": true,
+    "complete": true,
+    "source": "gbrjob"
+  },
+  "alignment": {
+    "aligned": false,
+    "issues": [
+      "Width varies by 12.5mm across copper/edge layers"
+    ],
+    "layer_extents": {
+      "B.Cu": {
+        "width": 83.518,
+        "height": 73.522
+      },
+      "B.Mask": {
+        "width": 86.0,
+        "height": 66.0
+      },
+      "B.Paste": {
+        "width": 0,
+        "height": 0
+      },
+      "B.SilkS": {
+        "width": 0,
+        "height": 0
+      },
+      "Edge.Cuts": {
+        "width": 96.0,
+        "height": 76.0
+      },
+      "F.Cu": {
+        "width": 94.999,
+        "height": 74.999
+      },
+      "F.Mask": {
+        "width": 88.09,
+        "height": 66.0
+      },
+      "F.Paste": {
+        "width": 84.19,
+        "height": 54.453
+      },
+      "F.SilkS": {
+        "width": 91.775,
+        "height": 75.92
+      },
+      "drill_mixed": {
+        "width": 86.0,
+        "height": 73.522
+      }
+    }
+  },
+  "drill_classification": {
+    "vias": {
+      "count": 375,
+      "tools": [
+        {
+          "diameter_mm": 0.3,
+          "count": 375
+        }
+      ]
+    },
+    "component_holes": {
+      "count": 48,
+      "tools": [
+        {
+          "diameter_mm": 1.0,
+          "count": 12
+        },
+        {
+          "diameter_mm": 1.02,
+          "count": 32
+        },
+        {
+          "diameter_mm": 1.85,
+          "count": 2
+        },
+        {
+          "diameter_mm": 2.2,
+          "count": 2
+        }
+      ]
+    },
+    "mounting_holes": {
+      "count": 8,
+      "tools": [
+        {
+          "diameter_mm": 3.0,
+          "count": 4,
+          "type": "NPTH"
+        },
+        {
+          "diameter_mm": 3.2,
+          "count": 4,
+          "type": "NPTH"
+        }
+      ]
+    },
+    "classification_method": "x2_attributes"
+  },
+  "pad_summary": {
+    "smd_apertures": 500,
+    "via_apertures": 750,
+    "heatsink_apertures": 0,
+    "tht_holes": 48,
+    "smd_source": "x2_aperture_function",
+    "smd_ratio": 0.91
+  },
+  "trace_widths": {
+    "unique_widths_mm": [
+      0.2
+    ],
+    "min_trace_mm": 0.2,
+    "max_trace_mm": 0.2,
+    "width_count": 1,
+    "min_feature_mm": 0.2
+  },
+  "component_analysis": {
+    "total_unique": 160,
+    "front_side": 160,
+    "back_side": 0,
+    "component_refs": [
+      "C1",
+      "C10",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "D1",
+      "D10",
+      "D11",
+      "D12",
+      "D13",
+      "D14",
+      "D15",
+      "D16",
+      "D17",
+      "D18",
+      "D19",
+      "D2",
+      "D20",
+      "D21",
+      "D22",
+      "D23",
+      "D24",
+      "D25",
+      "D26",
+      "D27",
+      "D28",
+      "D29",
+      "D3",
+      "D30",
+      "D31",
+      "D32",
+      "D33",
+      "D34",
+      "D35",
+      "D36",
+      "D37",
+      "D38",
+      "D39",
+      "D4",
+      "D40",
+      "D41",
+      "D42",
+      "D5",
+      "D6",
+      "D7",
+      "D8",
+      "D9",
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "J1",
+      "J2",
+      "J3",
+      "R1",
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R18",
+      "R19",
+      "R2",
+      "R20",
+      "R21",
+      "R22",
+      "R23",
+      "R24",
+      "R25",
+      "R26",
+      "R27",
+      "R28",
+      "R29",
+      "R3",
+      "R30",
+      "R31",
+      "R32",
+      "R33",
+      "R34",
+      "R35",
+      "R36",
+      "R37",
+      "R38",
+      "R39",
+      "R4",
+      "R40",
+      "R41",
+      "R42",
+      "R43",
+      "R44",
+      "R45",
+      "R46",
+      "R47",
+      "R48",
+      "R49",
+      "R5",
+      "R50",
+      "R51",
+      "R52",
+      "R53",
+      "R54",
+      "R55",
+      "R56",
+      "R57",
+      "R58",
+      "R59",
+      "R6",
+      "R60",
+      "R61",
+      "R62",
+      "R63",
+      "R64",
+      "R65",
+      "R66",
+      "R67",
+      "R68",
+      "R69",
+      "R7",
+      "R70",
+      "R71",
+      "R72",
+      "R73",
+      "R74",
+      "R75",
+      "R76",
+      "R77",
+      "R78",
+      "R8",
+      "R9",
+      "SW1",
+      "TP1",
+      "TP10",
+      "TP11",
+      "TP12",
+      "TP2",
+      "TP3",
+      "TP4",
+      "TP5",
+      "TP6",
+      "TP7",
+      "TP8",
+      "TP9",
+      "U1",
+      "U10",
+      "U2",
+      "U3",
+      "U4",
+      "U5",
+      "U6",
+      "U7",
+      "U8",
+      "U9"
+    ],
+    "has_x2_data": true,
+    "pads_per_component": {
+      "C1": 2,
+      "C10": 2,
+      "C2": 2,
+      "C3": 2,
+      "C4": 2,
+      "C5": 2,
+      "C6": 2,
+      "C7": 2,
+      "C8": 2,
+      "C9": 2,
+      "D1": 3,
+      "D10": 3,
+      "D11": 3,
+      "D12": 3,
+      "D13": 3,
+      "D14": 3,
+      "D15": 3,
+      "D16": 3,
+      "D17": 3,
+      "D18": 3,
+      "D19": 3,
+      "D2": 3,
+      "D20": 3,
+      "D21": 3,
+      "D22": 3,
+      "D23": 3,
+      "D24": 3,
+      "D25": 3,
+      "D26": 3,
+      "D27": 3,
+      "D28": 3,
+      "D29": 3,
+      "D3": 3,
+      "D30": 3,
+      "D31": 3,
+      "D32": 3,
+      "D33": 6,
+      "D34": 6,
+      "D35": 6,
+      "D36": 6,
+      "D37": 6,
+      "D38": 6,
+      "D39": 6,
+      "D4": 3,
+      "D40": 6,
+      "D41": 2,
+      "D42": 2,
+      "D5": 3,
+      "D6": 3,
+      "D7": 3,
+      "D8": 3,
+      "D9": 3,
+      "H1": 1,
+      "H2": 1,
+      "H3": 1,
+      "H4": 1,
+      "J1": 18,
+      "J2": 18,
+      "J3": 10,
+      "R1": 2,
+      "R10": 2,
+      "R11": 2,
+      "R12": 2,
+      "R13": 2,
+      "R14": 2,
+      "R15": 2,
+      "R16": 2,
+      "R17": 2,
+      "R18": 2,
+      "R19": 2,
+      "R2": 2,
+      "R20": 2,
+      "R21": 2,
+      "R22": 2,
+      "R23": 2,
+      "R24": 2,
+      "R25": 2,
+      "R26": 2,
+      "R27": 2,
+      "R28": 2,
+      "R29": 2,
+      "R3": 2,
+      "R30": 2,
+      "R31": 2,
+      "R32": 2,
+      "R33": 2,
+      "R34": 2,
+      "R35": 2,
+      "R36": 2,
+      "R37": 2,
+      "R38": 2,
+      "R39": 2,
+      "R4": 2,
+      "R40": 2,
+      "R41": 2,
+      "R42": 2,
+      "R43": 2,
+      "R44": 2,
+      "R45": 2,
+      "R46": 2,
+      "R47": 2,
+      "R48": 2,
+      "R49": 2,
+      "R5": 2,
+      "R50": 2,
+      "R51": 2,
+      "R52": 2,
+      "R53": 2,
+      "R54": 2,
+      "R55": 2,
+      "R56": 2,
+      "R57": 2,
+      "R58": 2,
+      "R59": 2,
+      "R6": 2,
+      "R60": 2,
+      "R61": 2,
+      "R62": 2,
+      "R63": 2,
+      "R64": 2,
+      "R65": 2,
+      "R66": 2,
+      "R67": 2,
+      "R68": 2,
+      "R69": 2,
+      "R7": 2,
+      "R70": 2,
+      "R71": 2,
+      "R72": 2,
+      "R73": 2,
+      "R74": 2,
+      "R75": 2,
+      "R76": 2,
+      "R77": 2,
+      "R78": 2,
+      "R8": 2,
+      "R9": 2,
+      "SW1": 2,
+      "TP1": 1,
+      "TP10": 1,
+      "TP11": 1,
+      "TP12": 1,
+      "TP2": 1,
+      "TP3": 1,
+      "TP4": 1,
+      "TP5": 1,
+      "TP6": 1,
+      "TP7": 1,
+      "TP8": 1,
+      "TP9": 1,
+      "U1": 47,
+      "U10": 3,
+      "U2": 16,
+      "U3": 16,
+      "U4": 16,
+      "U5": 16,
+      "U6": 16,
+      "U7": 16,
+      "U8": 16,
+      "U9": 16
+    },
+    "total_pads": 566
+  },
+  "net_analysis": {
+    "total_unique": 90,
+    "named_nets": 90,
+    "unnamed_nets": 0,
+    "power_nets": [],
+    "signal_nets": [
+      "/+3V3",
+      "/A:01",
+      "/A:01_NODE",
+      "/A:02",
+      "/A:02_NODE",
+      "/A:03",
+      "/A:03_NODE",
+      "/A:04",
+      "/A:04_NODE",
+      "/A:05",
+      "/A:05_NODE",
+      "/A:06",
+      "/A:06_NODE",
+      "/A:07",
+      "/A:07_NODE",
+      "/A:08",
+      "/A:08_NODE",
+      "/A:09",
+      "/A:09_NODE",
+      "/A:10",
+      "/A:10_NODE",
+      "/A:11",
+      "/A:11_NODE",
+      "/A:12",
+      "/A:12_NODE",
+      "/A:13",
+      "/A:13_NODE",
+      "/A:14",
+      "/A:14_NODE",
+      "/A:15",
+      "/A:15_NODE",
+      "/A:16",
+      "/A:16_NODE",
+      "/ADC_REF_1V8",
+      "/B:01",
+      "/B:01_NODE",
+      "/B:02",
+      "/B:02_NODE",
+      "/B:03",
+      "/B:03_NODE",
+      "/B:04",
+      "/B:04_NODE",
+      "/B:05",
+      "/B:05_NODE",
+      "/B:06",
+      "/B:06_NODE",
+      "/B:07",
+      "/B:07_NODE",
+      "/B:08",
+      "/B:08_NODE",
+      "/B:09",
+      "/B:09_NODE",
+      "/B:10",
+      "/B:10_NODE",
+      "/B:11",
+      "/B:11_NODE",
+      "/B:12",
+      "/B:12_NODE",
+      "/B:13",
+      "/B:13_NODE",
+      "/B:14",
+      "/B:14_NODE",
+      "/B:15",
+      "/B:15_NODE",
+      "/B:16",
+      "/B:16_NODE",
+      "/BIAS",
+      "/DRV_A_HI_EN",
+      "/DRV_A_LO_EN",
+      "/DRV_B_HI_EN",
+      "/DRV_B_LO_EN",
+      "/FAULT_LED",
+      "/FAULT_LED_A",
+      "/GND",
+      "/MUX_A0",
+      "/MUX_A1",
+      "/MUX_A2",
+      "/READY_LED",
+      "/READY_LED_A",
+      "/RUN",
+      "/SENSE_A",
+      "/SENSE_B",
+      "/SENSE_HI_EN",
+      "/SENSE_LO_EN",
+      "/START_CANCEL_N",
+      "/STIM",
+      "/SWCLK",
+      "/SWDIO",
+      "/VBUS",
+      "N/C"
+    ],
+    "total_pins": 554
+  },
+  "gerbers": [
+    {
+      "filename": "pinpath-B_Cu.gbl",
+      "layer_type": "B.Cu",
+      "units": "mm",
+      "aperture_count": 5,
+      "flash_count": 419,
+      "draw_count": 886,
+      "region_count": 1,
+      "x2_attributes": {
+        "GenerationSoftware": "KiCad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "CreationDate": "2026-09-18T10:15:02+00:00",
+        "ProjectId": "pinpath,70696e70-6174-4682-9e6b-696361645f70,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Copper,L2,Bot",
+        "FilePolarity": "Positive"
+      },
+      "aperture_analysis": {
+        "by_function": {
+          "ComponentPad": 3,
+          "ViaPad": 1,
+          "Conductor": 1
+        },
+        "by_function_flashes": {
+          "ComponentPad": 44,
+          "ViaPad": 375,
+          "Conductor": 0
+        },
+        "conductor_widths_mm": [
+          0.2
+        ],
+        "min_feature_mm": 0.2
+      },
+      "x2_component_count": 0,
+      "x2_net_count": 87,
+      "x2_pin_count": 44
+    },
+    {
+      "filename": "pinpath-B_Mask.gbs",
+      "layer_type": "B.Mask",
+      "units": "mm",
+      "aperture_count": 7,
+      "flash_count": 56,
+      "draw_count": 0,
+      "region_count": 0,
+      "x2_attributes": {
+        "GenerationSoftware": "KiCad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "CreationDate": "2026-09-18T10:15:02+00:00",
+        "ProjectId": "pinpath,70696e70-6174-4682-9e6b-696361645f70,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Soldermask,Bot",
+        "FilePolarity": "Negative"
+      },
+      "aperture_analysis": {
+        "min_feature_mm": 0.5
+      },
+      "x2_component_count": 19,
+      "x2_net_count": 0,
+      "x2_pin_count": 0
+    },
+    {
+      "filename": "pinpath-B_Paste.gbp",
+      "layer_type": "B.Paste",
+      "units": "mm",
+      "aperture_count": 0,
+      "flash_count": 0,
+      "draw_count": 0,
+      "region_count": 0,
+      "x2_attributes": {
+        "GenerationSoftware": "KiCad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "CreationDate": "2026-09-18T10:15:02+00:00",
+        "ProjectId": "pinpath,70696e70-6174-4682-9e6b-696361645f70,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Paste,Bot",
+        "FilePolarity": "Positive"
+      }
+    },
+    {
+      "filename": "pinpath-B_Silkscreen.gbo",
+      "layer_type": "B.SilkS",
+      "units": "mm",
+      "aperture_count": 0,
+      "flash_count": 0,
+      "draw_count": 0,
+      "region_count": 0,
+      "x2_attributes": {
+        "GenerationSoftware": "KiCad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "CreationDate": "2026-09-18T10:15:02+00:00",
+        "ProjectId": "pinpath,70696e70-6174-4682-9e6b-696361645f70,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Legend,Bot",
+        "FilePolarity": "Positive"
+      }
+    },
+    {
+      "filename": "pinpath-Edge_Cuts.gm1",
+      "layer_type": "Edge.Cuts",
+      "units": "mm",
+      "aperture_count": 1,
+      "flash_count": 0,
+      "draw_count": 4,
+      "region_count": 0,
+      "x2_attributes": {
+        "GenerationSoftware": "KiCad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "CreationDate": "2026-09-18T10:15:03+00:00",
+        "ProjectId": "pinpath,70696e70-6174-4682-9e6b-696361645f70,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Profile,NP"
+      },
+      "aperture_analysis": {
+        "by_function": {
+          "Profile": 1
+        },
+        "by_function_flashes": {
+          "Profile": 0
+        },
+        "min_feature_mm": 0.05
+      }
+    },
+    {
+      "filename": "pinpath-F_Cu.gtl",
+      "layer_type": "F.Cu",
+      "units": "mm",
+      "aperture_count": 20,
+      "flash_count": 929,
+      "draw_count": 15761,
+      "region_count": 66,
+      "x2_attributes": {
+        "GenerationSoftware": "KiCad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "CreationDate": "2026-09-18T10:15:02+00:00",
+        "ProjectId": "pinpath,70696e70-6174-4682-9e6b-696361645f70,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Copper,L1,Top",
+        "FilePolarity": "Positive"
+      },
+      "aperture_analysis": {
+        "by_function": {
+          "SMDPad": 12,
+          "ComponentPad": 3,
+          "ViaPad": 1,
+          "Conductor": 1
+        },
+        "by_function_flashes": {
+          "SMDPad": 500,
+          "ComponentPad": 44,
+          "ViaPad": 375,
+          "Conductor": 0
+        },
+        "conductor_widths_mm": [
+          0.2
+        ],
+        "min_feature_mm": 0.2
+      },
+      "x2_component_count": 0,
+      "x2_net_count": 90,
+      "x2_pin_count": 554
+    },
+    {
+      "filename": "pinpath-F_Mask.gts",
+      "layer_type": "F.Mask",
+      "units": "mm",
+      "aperture_count": 22,
+      "flash_count": 566,
+      "draw_count": 0,
+      "region_count": 0,
+      "x2_attributes": {
+        "GenerationSoftware": "KiCad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "CreationDate": "2026-09-18T10:15:02+00:00",
+        "ProjectId": "pinpath,70696e70-6174-4682-9e6b-696361645f70,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Soldermask,Top",
+        "FilePolarity": "Negative"
+      },
+      "aperture_analysis": {
+        "min_feature_mm": 0.2
+      },
+      "x2_component_count": 160,
+      "x2_net_count": 0,
+      "x2_pin_count": 0
+    },
+    {
+      "filename": "pinpath-F_Paste.gtp",
+      "layer_type": "F.Paste",
+      "units": "mm",
+      "aperture_count": 12,
+      "flash_count": 510,
+      "draw_count": 0,
+      "region_count": 0,
+      "x2_attributes": {
+        "GenerationSoftware": "KiCad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "CreationDate": "2026-09-18T10:15:02+00:00",
+        "ProjectId": "pinpath,70696e70-6174-4682-9e6b-696361645f70,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Paste,Top",
+        "FilePolarity": "Positive"
+      },
+      "aperture_analysis": {
+        "min_feature_mm": 0.2
+      },
+      "x2_component_count": 142,
+      "x2_net_count": 0,
+      "x2_pin_count": 0
+    },
+    {
+      "filename": "pinpath-F_Silkscreen.gto",
+      "layer_type": "F.SilkS",
+      "units": "mm",
+      "aperture_count": 2,
+      "flash_count": 0,
+      "draw_count": 1869,
+      "region_count": 49,
+      "x2_attributes": {
+        "GenerationSoftware": "KiCad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "CreationDate": "2026-09-18T10:15:02+00:00",
+        "ProjectId": "pinpath,70696e70-6174-4682-9e6b-696361645f70,rev?",
+        "SameCoordinates": "Original",
+        "FileFunction": "Legend,Top",
+        "FilePolarity": "Positive"
+      },
+      "aperture_analysis": {
+        "min_feature_mm": 0.12
+      },
+      "x2_component_count": 156,
+      "x2_net_count": 0,
+      "x2_pin_count": 0
+    }
+  ],
+  "drills": [
+    {
+      "filename": "pinpath.drl",
+      "type": "mixed",
+      "units": "mm",
+      "hole_count": 431,
+      "tools": {
+        "T1": {
+          "diameter_mm": 0.3,
+          "hole_count": 375,
+          "aper_function": "Plated,PTH,ViaDrill"
+        },
+        "T2": {
+          "diameter_mm": 1.0,
+          "hole_count": 12,
+          "aper_function": "Plated,PTH,ComponentDrill"
+        },
+        "T3": {
+          "diameter_mm": 1.02,
+          "hole_count": 32,
+          "aper_function": "Plated,PTH,ComponentDrill"
+        },
+        "T4": {
+          "diameter_mm": 1.85,
+          "hole_count": 2,
+          "aper_function": "NonPlated,NPTH,ComponentDrill"
+        },
+        "T5": {
+          "diameter_mm": 2.2,
+          "hole_count": 2,
+          "aper_function": "NonPlated,NPTH,ComponentDrill"
+        },
+        "T6": {
+          "diameter_mm": 3.0,
+          "hole_count": 4,
+          "aper_function": "NonPlated,NPTH,ComponentDrill"
+        },
+        "T7": {
+          "diameter_mm": 3.2,
+          "hole_count": 4,
+          "aper_function": "NonPlated,NPTH,ComponentDrill"
+        }
+      },
+      "layer_span": [
+        1,
+        2
+      ],
+      "x2_attributes": {
+        "CreationDate": "2026-09-18T10:15:03+00:00",
+        "GenerationSoftware": "Kicad,Pcbnew,9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+        "FileFunction": "MixedPlating,1,2"
+      }
+    }
+  ],
+  "drill_tools": {
+    "0.3mm": {
+      "diameter_mm": 0.3,
+      "count": 375,
+      "type": "mixed"
+    },
+    "1.0mm": {
+      "diameter_mm": 1.0,
+      "count": 12,
+      "type": "mixed"
+    },
+    "1.02mm": {
+      "diameter_mm": 1.02,
+      "count": 32,
+      "type": "mixed"
+    },
+    "1.85mm": {
+      "diameter_mm": 1.85,
+      "count": 2,
+      "type": "mixed"
+    },
+    "2.2mm": {
+      "diameter_mm": 2.2,
+      "count": 2,
+      "type": "mixed"
+    },
+    "3.0mm": {
+      "diameter_mm": 3.0,
+      "count": 4,
+      "type": "mixed"
+    },
+    "3.2mm": {
+      "diameter_mm": 3.2,
+      "count": 4,
+      "type": "mixed"
+    }
+  },
+  "job_file": {
+    "generator": "Pcbnew 9.0.9.1-unknown-202605141413~ce707d0a6c~ubuntu24.04.1",
+    "vendor": "KiCad",
+    "creation_date": "2026-09-18T10:15:03+00:00",
+    "board_width_mm": 96.05,
+    "board_height_mm": 76.05,
+    "layer_count": 2,
+    "board_thickness_mm": 1.6,
+    "finish": "None",
+    "project_name": "pinpath",
+    "design_rules": [
+      {
+        "layers": "Outer",
+        "PadToPad": 0.2,
+        "PadToTrack": 0.2,
+        "TrackToTrack": 0.2,
+        "MinLineWidth": 0.2,
+        "TrackToRegion": 0.25,
+        "RegionToRegion": 0.25
+      }
+    ],
+    "expected_files": [
+      {
+        "path": "pinpath-F_Cu.gtl",
+        "function": "Copper,L1,Top",
+        "polarity": "Positive"
+      },
+      {
+        "path": "pinpath-B_Cu.gbl",
+        "function": "Copper,L2,Bot",
+        "polarity": "Positive"
+      },
+      {
+        "path": "pinpath-F_Paste.gtp",
+        "function": "SolderPaste,Top",
+        "polarity": "Positive"
+      },
+      {
+        "path": "pinpath-B_Paste.gbp",
+        "function": "SolderPaste,Bot",
+        "polarity": "Positive"
+      },
+      {
+        "path": "pinpath-F_Silkscreen.gto",
+        "function": "Legend,Top",
+        "polarity": "Positive"
+      },
+      {
+        "path": "pinpath-B_Silkscreen.gbo",
+        "function": "Legend,Bot",
+        "polarity": "Positive"
+      },
+      {
+        "path": "pinpath-F_Mask.gts",
+        "function": "SolderMask,Top",
+        "polarity": "Negative"
+      },
+      {
+        "path": "pinpath-B_Mask.gbs",
+        "function": "SolderMask,Bot",
+        "polarity": "Negative"
+      },
+      {
+        "path": "pinpath-Edge_Cuts.gm1",
+        "function": "Profile",
+        "polarity": "Positive"
+      }
+    ],
+    "stackup": [
+      {
+        "type": "Legend",
+        "name": "Top Silk Screen"
+      },
+      {
+        "type": "SolderPaste",
+        "name": "Top Solder Paste"
+      },
+      {
+        "type": "SolderMask",
+        "name": "Top Solder Mask",
+        "thickness_mm": 0.01
+      },
+      {
+        "type": "Copper",
+        "name": "F.Cu",
+        "thickness_mm": 0.035
+      },
+      {
+        "type": "Dielectric",
+        "name": "F.Cu/B.Cu",
+        "thickness_mm": 1.51,
+        "material": "FR4"
+      },
+      {
+        "type": "Copper",
+        "name": "B.Cu",
+        "thickness_mm": 0.035
+      },
+      {
+        "type": "SolderMask",
+        "name": "Bottom Solder Mask",
+        "thickness_mm": 0.01
+      },
+      {
+        "type": "SolderPaste",
+        "name": "Bottom Solder Paste"
+      },
+      {
+        "type": "Legend",
+        "name": "Bottom Silk Screen"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "detector": "analyze_gerbers",
+      "rule_id": "GR-002",
+      "category": "gerber_alignment",
+      "severity": "warning",
+      "confidence": "deterministic",
+      "evidence_source": "topology",
+      "summary": "Alignment: Width varies by 12.5mm across copper/edge layers",
+      "description": "Layer alignment issue: Width varies by 12.5mm across copper/edge layers",
+      "components": [],
+      "nets": [],
+      "pins": [],
+      "recommendation": "Re-export gerbers to ensure consistent layer alignment.",
+      "report_context": {
+        "section": "Gerber Alignment",
+        "impact": "Layer misregistration",
+        "standard_ref": ""
+      },
+      "stages": [
+        "pre_fab"
+      ],
+      "finding_id": "gerber:GR-002:990686ff9516"
+    }
+  ],
+  "assessments": [],
+  "summary": {
+    "total_findings": 1,
+    "by_severity": {
+      "error": 0,
+      "warning": 1,
+      "info": 0
+    }
+  },
+  "trust_summary": {
+    "total_findings": 1,
+    "trust_level": "high",
+    "by_confidence": {
+      "deterministic": 1,
+      "heuristic": 0,
+      "datasheet_backed": 0
+    },
+    "by_evidence_source": {
+      "datasheet": 0,
+      "topology": 1,
+      "heuristic_rule": 0,
+      "symbol_footprint": 0,
+      "bom": 0,
+      "geometry": 0,
+      "api_lookup": 0
+    },
+    "provenance_coverage_pct": 0.0
+  },
+  "inputs": {
+    "source_files": [
+      "fab-out/pinpath-gerbers/pinpath-B_Cu.gbl",
+      "fab-out/pinpath-gerbers/pinpath-B_Mask.gbs",
+      "fab-out/pinpath-gerbers/pinpath-B_Paste.gbp",
+      "fab-out/pinpath-gerbers/pinpath-B_Silkscreen.gbo",
+      "fab-out/pinpath-gerbers/pinpath-Edge_Cuts.gm1",
+      "fab-out/pinpath-gerbers/pinpath-F_Cu.gtl",
+      "fab-out/pinpath-gerbers/pinpath-F_Mask.gts",
+      "fab-out/pinpath-gerbers/pinpath-F_Paste.gtp",
+      "fab-out/pinpath-gerbers/pinpath-F_Silkscreen.gto",
+      "fab-out/pinpath-gerbers/pinpath-job.gbrjob",
+      "fab-out/pinpath-gerbers/pinpath.drl"
+    ],
+    "source_hashes": {
+      "fab-out/pinpath-gerbers/pinpath-B_Cu.gbl": "ba6fcf9f25a85a0e3246b6fec1bd1bead86a73cdf2df99484f1c9e8894bfd225",
+      "fab-out/pinpath-gerbers/pinpath-B_Mask.gbs": "4b28edd70f9baa4a66ecc040e62157fb5ebe0525b495ee930dc18399a74acebd",
+      "fab-out/pinpath-gerbers/pinpath-B_Paste.gbp": "703da454de81fc3c43751d6b5d4b7a87687a1656b2a37a0e0e6fcabf56e55d93",
+      "fab-out/pinpath-gerbers/pinpath-B_Silkscreen.gbo": "c22f1da0a0d72448fe610e51e24aa0b033ee42e4547ea036d45707a4a04a8f0c",
+      "fab-out/pinpath-gerbers/pinpath-Edge_Cuts.gm1": "c79674c78f2a2ca7da5a976d71f8d62e169de0cddda35acc5986f045bae52938",
+      "fab-out/pinpath-gerbers/pinpath-F_Cu.gtl": "f69c2d6a8e0abd10809e8536841861854394a0953655e7c9cfa3f2685e2736ae",
+      "fab-out/pinpath-gerbers/pinpath-F_Mask.gts": "759fe5d0351a444d8a823f338bcef10f77a4a5924c8f045532a4dc71eebf8739",
+      "fab-out/pinpath-gerbers/pinpath-F_Paste.gtp": "f54c24a0dc41d7fb29a8fbd983e33572ca3e6b059a2581ce9959a04b6f525e4c",
+      "fab-out/pinpath-gerbers/pinpath-F_Silkscreen.gto": "31e873b741b3bc6f4e04437574f5d346312f6a8bda09f3e35e53f19f3205624a",
+      "fab-out/pinpath-gerbers/pinpath-job.gbrjob": "4bf59ed42041cd6a970f59de0244c2467fdcb7cf7f08047d4ff4468720b9f73c",
+      "fab-out/pinpath-gerbers/pinpath.drl": "10db68ebdb03753a53bbf0b98b006479a3cd9ed1256c4a8d3a9597e5b7681eba"
+    },
+    "run_id": "20260918T101504Z-19d859",
+    "config_hash": null,
+    "upstream_artifacts": {}
+  },
+  "compat": {
+    "minimum_consumer_version": "1.4.0",
+    "deprecated_fields": [],
+    "experimental_fields": []
+  },
+  "audience_summary": {
+    "designer": {
+      "total_findings": 1,
+      "by_severity": {
+        "error": 0,
+        "warning": 1,
+        "info": 0
+      },
+      "by_category": {
+        "gerber_alignment": 1
+      },
+      "top_issues": [
+        {
+          "detector": "analyze_gerbers",
+          "rule_id": "GR-002",
+          "category": "gerber_alignment",
+          "severity": "warning",
+          "confidence": "deterministic",
+          "evidence_source": "topology",
+          "summary": "Alignment: Width varies by 12.5mm across copper/edge layers",
+          "description": "Layer alignment issue: Width varies by 12.5mm across copper/edge layers",
+          "components": [],
+          "nets": [],
+          "pins": [],
+          "recommendation": "Re-export gerbers to ensure consistent layer alignment.",
+          "report_context": {
+            "section": "Gerber Alignment",
+            "impact": "Layer misregistration",
+            "standard_ref": ""
+          },
+          "stages": [
+            "pre_fab"
+          ],
+          "finding_id": "gerber:GR-002:990686ff9516"
+        }
+      ]
+    },
+    "reviewer": {
+      "total_findings": 1,
+      "by_category": {
+        "gerber_alignment": 1
+      },
+      "top_issues": [
+        {
+          "rule_id": "GR-002",
+          "severity": "warning",
+          "summary": "Alignment: Width varies by 12.5mm across copper/edge layers",
+          "recommendation": "Re-export gerbers to ensure consistent layer alignment.",
+          "category": "gerber_alignment"
+        }
+      ]
+    },
+    "manager": {
+      "risk_level": "low",
+      "blocker_count": 0,
+      "warning_count": 1,
+      "stage_readiness": {
+        "schematic": "pass",
+        "layout": "pass",
+        "pre_fab": "needs_review",
+        "bring_up": "pass"
+      },
+      "one_liner": "1 warning across 1 category."
+    }
+  },
+  "capability_mode_ref": {
+    "source": "analysis/capability_mode.json",
+    "run_id": "20260918T101504Z-19d859"
+  }
+}

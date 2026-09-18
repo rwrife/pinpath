@@ -1,0 +1,127 @@
+
+== Pad 13 [/+3V3] of U6 on F.Cu | Track [/+3V3] on B.Cu, length 6.3702 mm
+   A@(33.86,53.27) B@(39.76,53.27)
+   xseg F.Cu: track /A:09_NODE @(37.14,53.27) | ring@dst: track /GND @(37.17,52.66)
+   xseg B.Cu: via /A:09_NODE @(38.66,53.27) | ring@dst: pad U6.12 [/A:05_NODE] @(33.86,53.92)
+   L-elbow (33.86,53.27): ring;seg2:via /A:09_NODE @(38.66,53.27)
+   L-elbow (39.76,53.27): ring;seg1:track /A:09_NODE @(37.14,53.27)
+
+== Track [/+3V3] on F.Cu, length 1.2397 mm | Pad 13 [/+3V3] of U2 on F.Cu
+   A@(40.15,48.61) B@(33.86,46.67)
+   straight F.Cu: track /A:10_NODE @(38.25,47.33)
+   xseg F.Cu: track /A:10_NODE @(38.25,47.33) | ring@dst: pad U2.12 [/A:05_NODE] @(33.86,47.33)
+   xseg F.Cu: track /A:10_NODE @(38.25,47.33) | ring@dst: track /A:13_NODE @(40.55,48.78)
+   L-elbow (40.15,46.67): ring;seg1:via /A:09_NODE @(40.41,46.51);seg2:track /A:09_NODE @(37.14,46.67)
+   L-elbow (33.86,48.61): ring;seg1:track /A:07_NODE @(33.86,48.62);seg2:track /A:05_NODE @(33.86,47.33)
+
+== Pad 6 [/A:03_NODE] of U2 on F.Cu | Track [/A:03_NODE] on B.Cu, length 10.2073 mm
+   A@(28.14,47.98) B@(28.55,27.94)
+   xseg F.Cu: track /+3V3 @(34.65,28.61) | ring@dst: OK
+   xseg B.Cu: track /A:01_NODE @(28.41,42.67) | ring@dst: pad U2.5 [/A:02_NODE] @(28.14,47.33)
+   L-elbow (28.14,27.94): ring;seg1:track /+3V3 @(34.65,28.61)
+   L-elbow (28.55,47.98): ring;seg2:track /A:01_NODE @(28.41,42.67)
+
+== Via [/A:05_NODE] on F.Cu - B.Cu | Track [/A:05_NODE] on F.Cu, length 0.5754 mm
+   A@(32.62,42.93) B@(42.31,24.16)
+   straight F.Cu: track /+3V3 @(39.81,28.00)
+   straight B.Cu: track /A:04_NODE @(33.28,42.63)
+   xseg F.Cu: track /+3V3 @(39.81,28.00) | ring@dst: OK
+
+== Track [/A:06_NODE] on B.Cu, length 0.4230 mm | Pad 6 [/A:06_NODE] of D34 on F.Cu
+   A@(30.58,48.27) B@(30.60,40.85)
+   xseg B.Cu: track /A:08_NODE @(30.22,42.48) | ring@dst: track /GND @(31.42,40.34)
+   xseg F.Cu: track /A:02_NODE @(31.19,47.33) | ring@dst: track /A:08_NODE @(30.16,46.98)
+   L-elbow (30.58,40.85): ring;seg1:track /A:08_NODE @(30.22,42.48)
+   L-elbow (30.60,48.27): ring;seg2:track /A:02_NODE @(31.19,47.33)
+
+== Track [/A:06_NODE] on F.Cu, length 4.5448 mm | Pad 6 [/A:06_NODE] of D34 on F.Cu
+   A@(39.50,18.91) B@(30.60,40.85)
+   straight F.Cu: track /+3V3 @(37.67,28.02)
+   xseg F.Cu: track /+3V3 @(37.67,28.02) | ring@dst: track /GND @(31.42,40.34)
+   xseg F.Cu: track /+3V3 @(37.67,28.02) | ring@dst: track /A:03 @(40.30,17.83)
+   L-elbow (39.50,40.85): ring;seg1:track /+3V3 @(41.36,32.04);seg2:track /A:10_NODE @(34.91,43.38)
+   L-elbow (30.60,18.91): ring;seg1:track /A:02_NODE @(31.25,17.62);seg2:track /+3V3 @(34.65,28.61)
+
+== Pad 3 [/A:07_NODE] of D34 on F.Cu | Track [/A:07_NODE] on F.Cu, length 2.4814 mm
+   A@(28.70,42.15) B@(33.86,48.62)
+   straight F.Cu: via /A:02_NODE @(31.72,46.80)
+   xseg F.Cu: via /A:02_NODE @(31.72,46.80) | ring@dst: pad U2.9 [/A:08_NODE] @(33.86,49.27)
+   xseg F.Cu: via /A:02_NODE @(31.72,46.80) | ring@dst: pad D34.2 [/GND] @(28.70,41.50)
+   L-elbow (28.70,48.62): ring;seg1:track /A:01_NODE @(28.14,46.67);seg2:pad U2.7 [/A:04_NODE] @(28.14,48.62)
+   L-elbow (33.86,42.15): ring;seg1:track /A:08_NODE @(30.47,42.02);seg2:track /A:05_NODE @(33.86,47.33)
+
+== Track [/A:08_NODE] on B.Cu, length 4.4445 mm | Pad 9 [/A:08_NODE] of U2 on F.Cu
+   A@(30.22,42.48) B@(33.86,49.27)
+   xseg B.Cu: track /A:02_NODE @(31.49,44.04) | ring@dst: track /STIM @(32.83,49.81)
+   xseg F.Cu: track /A:05_NODE @(33.86,47.33) | ring@dst: track /A:05_NODE @(28.56,42.93)
+   L-elbow (30.22,49.27): ring;seg1:track /A:06_NODE @(30.58,48.27);seg2:track /STIM @(32.30,49.27)
+   L-elbow (33.86,42.48): ring;seg1:track /A:02_NODE @(31.49,37.45);seg2:track /A:05_NODE @(33.86,47.33)
+
+== Track [/A:08_NODE] on B.Cu, length 0.4274 mm | Pad 4 [/A:08_NODE] of D34 on F.Cu
+   A@(49.57,24.54) B@(30.60,42.15)
+   xseg B.Cu: track /A:02_NODE @(31.49,37.45) | ring@dst: pad D34.5 [] @(30.60,41.50)
+   xseg F.Cu: track /+3V3 @(42.83,30.96) | ring@dst: track /A:07_NODE @(49.50,23.97)
+   L-elbow (49.57,42.15): ring;seg1:via /A:15 @(49.06,35.69);seg2:track /A:10_NODE @(34.91,43.38)
+   L-elbow (30.60,24.54): ring;seg1:track /A:01 @(31.43,19.53);seg2:track /+3V3 @(34.65,28.61)
+
+== Track [/A:11_NODE] on B.Cu, length 1.1271 mm | Pad 6 [/A:11_NODE] of U3 on F.Cu
+   A@(32.38,40.85) B@(37.14,47.98)
+   xseg B.Cu: track /A:04_NODE @(33.28,42.63) | ring@dst: pad U3.5 [/A:10_NODE] @(37.14,47.33)
+   xseg F.Cu: track /A:10_NODE @(27.59,43.57) | ring@dst: track /A:09_NODE @(32.35,40.35)
+   L-elbow (32.38,47.98): ring;seg1:track /A:04_NODE @(33.28,42.63);seg2:track /A:06_NODE @(33.86,47.98)
+   L-elbow (37.14,40.85): ring;seg1:track /A:09_NODE @(38.39,45.15);seg2:track /A:09_NODE @(37.14,46.67)
+
+== Pad 4 [/A:12_NODE] of D35 on F.Cu | Track [/A:12_NODE] on F.Cu, length 0.9558 mm
+   A@(34.25,41.65) B@(39.16,38.09)
+   straight F.Cu: track /A:10_NODE @(34.91,43.38)
+   xseg F.Cu: track /A:10_NODE @(34.91,43.38) | ring@dst: track /A:11_NODE @(39.91,39.41)
+   xseg F.Cu: track /A:10_NODE @(34.91,43.38) | ring@dst: pad D35.5 [] @(34.25,41.00)
+   L-elbow (34.25,38.09): ring;seg1:track /A:04_NODE @(34.41,38.15);seg2:track /A:04_NODE @(34.41,38.15)
+   L-elbow (39.16,41.65): ring;seg1:track /A:10_NODE @(34.91,43.38);seg2:track /A:11_NODE @(39.91,39.41)
+
+== Track [/A:12_NODE] on F.Cu, length 3.8448 mm | Pad 7 [/A:12_NODE] of U3 on F.Cu
+   A@(37.14,55.23) B@(37.14,48.62)
+   straight F.Cu: track /A:09_NODE @(37.14,53.27)
+   xseg F.Cu: track /A:09_NODE @(37.14,53.27) | ring@dst: pad U3.6 [/A:11_NODE] @(37.14,47.98)
+   xseg F.Cu: track /A:09_NODE @(37.14,53.27) | ring@dst: pad U7.6 [/A:11_NODE] @(37.14,54.58)
+   L-elbow (37.14,48.62): ring;seg1:track /A:09_NODE @(37.14,53.27)
+   L-elbow (37.14,55.23): ring;seg2:track /A:09_NODE @(37.14,53.27)
+
+== Pad 6 [/B:03_NODE] of U8 on F.Cu | Track [/B:03_NODE] on F.Cu, length 1.1443 mm
+   A@(57.54,54.58) B@(57.54,47.98)
+   straight F.Cu: track /B:01_NODE @(56.98,50.54)
+   xseg F.Cu: track /B:01_NODE @(56.98,50.54) | ring@dst: pad U4.5 [/B:02_NODE] @(57.54,47.33)
+   xseg F.Cu: track /B:01_NODE @(56.98,50.54) | ring@dst: pad U8.5 [/B:02_NODE] @(57.54,53.92)
+   L-elbow (57.54,47.98): ring;seg1:track /B:01_NODE @(56.98,50.54)
+   L-elbow (57.54,54.58): ring;seg2:track /B:01_NODE @(56.98,50.54)
+
+== Pad 11 [/B:06_NODE] of U4 on F.Cu | Track [/B:06_NODE] on B.Cu, length 3.8018 mm
+   A@(63.26,47.98) B@(66.18,49.75)
+   xseg F.Cu: track /MUX_A1 @(66.78,49.82) | ring@dst: track /MUX_A1 @(66.78,49.82)
+   xseg B.Cu: track /DRV_B_HI_EN @(63.40,47.00) | ring@dst: track /B:05_NODE @(63.19,47.40)
+   L-elbow (63.26,49.75): ring;seg1:track /B:07_NODE @(63.26,48.62);seg2:track /DRV_B_HI_EN @(63.40,47.00)
+   L-elbow (66.18,47.98): ring;seg1:track /MUX_A1 @(65.42,49.82);seg2:track /MUX_A0 @(65.50,48.85)
+
+== Pad 10 [/B:07_NODE] of U8 on F.Cu | Track [/B:07_NODE] on F.Cu, length 2.5281 mm
+   A@(63.26,55.23) B@(63.26,48.62)
+   straight F.Cu: track /+3V3 @(64.54,53.41)
+   xseg F.Cu: track /+3V3 @(64.54,53.41) | ring@dst: pad U4.9 [/B:08_NODE] @(63.26,49.27)
+   xseg F.Cu: track /+3V3 @(64.54,53.41) | ring@dst: pad U8.9 [/B:08_NODE] @(63.26,55.88)
+   L-elbow (63.26,48.62): ring;seg1:track /+3V3 @(64.54,53.41)
+   L-elbow (63.26,55.23): ring;seg2:track /+3V3 @(64.54,53.41)
+
+== Pad 2 [/DRV_A_HI_EN] of U3 on F.Cu | Track [/DRV_A_HI_EN] on F.Cu, length 0.5733 mm
+   A@(37.14,45.38) B@(32.98,65.59)
+   straight F.Cu: track /+3V3 @(36.40,60.95)
+   xseg F.Cu: track /+3V3 @(36.40,60.95) | ring@dst: track /SENSE_LO_EN @(26.84,64.99)
+   xseg F.Cu: track /+3V3 @(36.40,60.95) | ring@dst: pad U3.1 [/MUX_A0] @(37.14,44.73)
+   L-elbow (37.14,65.59): ring;seg1:track /+3V3 @(40.10,60.95);seg2:track /SENSE_LO_EN @(36.78,64.99)
+   L-elbow (32.98,45.38): ring;seg1:track /MUX_A2 @(33.86,45.38);seg2:track /+3V3 @(36.40,60.95)
+
+== Track [/MUX_A0] on F.Cu, length 0.7931 mm | Track [/MUX_A0] on F.Cu, length 1.8707 mm
+   A@(37.14,51.33) B@(57.54,51.33)
+   straight F.Cu: track /+3V3 @(43.75,50.70)
+   xseg F.Cu: track /+3V3 @(43.75,50.70) | ring@dst: pad U8.2 [/SENSE_LO_EN] @(57.54,51.98)
+   xseg F.Cu: track /+3V3 @(43.75,50.70) | ring@dst: pad U7.2 [/SENSE_HI_EN] @(37.14,51.98)
+   L-elbow (37.14,51.33): ring;seg2:track /+3V3 @(43.75,50.70)
+   L-elbow (57.54,51.33): ring;seg1:track /+3V3 @(43.75,50.70)

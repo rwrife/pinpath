@@ -1,0 +1,16 @@
+06:02:20: Debug: Adding duplicate image handler for 'PNG file'
+06:02:20: Debug: Adding duplicate image handler for 'JPEG file'
+06:02:20: Debug: Adding duplicate image handler for 'TIFF file'
+06:02:20: Debug: Adding duplicate image handler for 'GIF file'
+06:02:20: Debug: Adding duplicate image handler for 'PNM file'
+06:02:20: Debug: Adding duplicate image handler for 'PCX file'
+06:02:20: Debug: Adding duplicate image handler for 'IFF file'
+06:02:20: Debug: Adding duplicate image handler for 'Windows icon file'
+06:02:20: Debug: Adding duplicate image handler for 'Windows cursor file'
+06:02:20: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+06:02:20: Debug: Adding duplicate image handler for 'TGA file'
+06:02:20: Debug: Adding duplicate image handler for 'XPM file'
+ses_import True
+tracks 2402 vias 374
+saved hardware/route-candidate.kicad_pcb
+ratsnest probe failed: 'CONNECTIVITY_DATA' object has no attribute 'BuildRatsnest4'
