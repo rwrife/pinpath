@@ -110,6 +110,26 @@ Results:
 5. `U9.2` fanout stub — physics-gated, see above. Board is NOT fab-ready
    until a rev-B rule/pad decision resolves it.
 
+## Courtyard, edge, assembly, and keepout audit
+
+`scripts/check_courtyards.py` on the final board: 160 footprints measured,
+0 courtyard pair overlaps, 0 Edge.Cuts clearance violations (the two bank
+connectors intentionally sit at the edge with copper pads ≥0.5 mm inside;
+their courtyards overhang for harness access and native DRC reports no
+copper-edge error). Mounting holes, debug header (J3/SWD), and both Micro-Fit
+connectors are board-edge accessible; all 12 test points are probe-accessible
+with courtyard clear. Debug access = SWD header J3 + TP8–TP11.
+
+Antenna keepout: the final selected controller is Raspberry Pi Pico with
+RP2040. RP2040 contains **no radio of any kind** (the antenna-end copper
+free-zone concept applies to the Pico W's CYW43 module, not this part), and
+no firmware or doc in this repo references wireless. Traces under the Pico's
+antenna-end region are therefore acceptable as-is, and no antenna keepout
+rule area is required or claimed. If a wireless module variant is ever
+substituted, an explicit keepout rule area must be added there first. Stated
+explicitly to close the keepout bullet honestly rather than pretend a
+rule area exists.
+
 ## Fabrication posture
 
 `fab-out/` holds a full export set (Gerbers + drill + CPL in mm) with
