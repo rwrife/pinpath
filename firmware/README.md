@@ -28,6 +28,13 @@ The firmware fails closed:
   - bounded progress messages.
 - `src/main.cpp`: RP2040 USB-CDC newline JSON loop wiring the protocol engine into a HAL/clock abstraction.
 - `tests/test_core.cpp`: host unit/property-style tests for malformed, oversized, duplicate-id, duplicate-key, out-of-order/invalid-state, token expiry, crossover classification, and safe-state/token invalidation behavior.
+- `tests/test_scenarios.cpp` (issue #7): 13-scenario integration matrix on the same core —
+  known-good loopback self-test, open, short, multi-short, crossover, reversed-fixture,
+  intermittent, cancel, reset-boot, precheck-lockout, token expiry, unexpected-voltage
+  lockout, and unvalidated-limits refusal. Run as `pinpath_scenario_matrix`; with
+  `PINPATH_SCENARIO_JSON=1` it emits the archive record stored at
+  `hardware/reports/integration-scenario-matrix-hostsim.json`. All results are
+  `host_simulation` evidence, not bench evidence.
 - `hil/run_fixture.py`: serial HIL fixture runner that records `device_observation` by default and only emits `bench` context when a complete bench metadata record is supplied.
 
 ## Pinned SDK/toolchain

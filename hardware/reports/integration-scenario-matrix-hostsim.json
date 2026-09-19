@@ -1,0 +1,102 @@
+{
+  "evidence_context": "host_simulation",
+  "firmware_source": "firmware/src/pinpath_core.cpp (same core compiled for RP2040 target)",
+  "hardware_revision": "pinpath-rev-a-candidate",
+  "kind": "pinpath-integration-scenario-matrix",
+  "limits_revision": "limits-rev-a",
+  "note": "Host simulation only. Not bench evidence; no assembled unit exists.",
+  "scenarios": [
+    {
+      "evidence_context": "host_simulation",
+      "observed": "16/16 expected loopback groups matched; pass=true; returns idle_safe with no token and no drive",
+      "requirement_refs": "REQ-FUN-003/REQ-SAF-008",
+      "result": "pass",
+      "scenario": "known_good_loopback_self_test"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "precheck fail -> fault_safe, fault indicator set, scan rejected precheck_required, nodes safe",
+      "requirement_refs": "REQ-SAF-004/REQ-SAF-005",
+      "result": "pass",
+      "scenario": "precheck_fail_locks_scan"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "token >5 s consumed; scan rejected precheck_expired; engine returns idle_safe with no drive",
+      "requirement_refs": "REQ-SAF-005/RISK-019",
+      "result": "pass",
+      "scenario": "precheck_token_expiry_blocks_scan"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "expected group A:07-B:07 absent from observations -> open bucket, pass=false, other buckets clean",
+      "requirement_refs": "REQ-FUN-003",
+      "result": "pass",
+      "scenario": "open_detected"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "observed group {A:01,B:01,A:07,B:07} merges two expected groups -> short bucket, pass=false",
+      "requirement_refs": "REQ-FUN-004",
+      "result": "pass",
+      "scenario": "short_two_expected_groups_merged"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "two independent merged groups (incl. expected-isolated A:04) both land in short bucket; pass=false",
+      "requirement_refs": "REQ-FUN-004/RISK-004",
+      "result": "pass",
+      "scenario": "multi_short_group_merge"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "observed cycle {A:01,B:02}+{A:02,B:01} vs expected pairs -> crossover bucket, pass=false",
+      "requirement_refs": "REQ-FUN-004",
+      "result": "pass",
+      "scenario": "crossover_pair_swap"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "reversed mapping flags 8 crossover cycles covering all 16 expected pairs, pass=false, returns idle_safe",
+      "requirement_refs": "REQ-SAF-008/RISK-006",
+      "result": "pass",
+      "scenario": "reversed_fixture_caught"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "alternating samples on A:11-B:11 -> unstable endpoints, stable=false, pass=false (not certainty)",
+      "requirement_refs": "REQ-FUN-003/RISK-007",
+      "result": "pass",
+      "scenario": "intermittent_unstable_flagged"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "cancel mid-scan -> cancelled (complete=false), drive disabled, token consumed, rescan needs new precheck",
+      "requirement_refs": "REQ-FUN-006/RISK-009/RISK-011",
+      "result": "pass",
+      "scenario": "cancel_during_scan_returns_safe"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "fresh engine reports idle_safe, refuses scan, and recovers through precheck -> scan -> idle_safe",
+      "requirement_refs": "REQ-SAF-002/RISK-010",
+      "result": "pass",
+      "scenario": "reset_boot_safe_requires_precheck"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "voltage mid-scan -> fault latched, drive off, token gone; scan blocked until fault cleared + new precheck",
+      "requirement_refs": "REQ-SAF-005/RISK-005",
+      "result": "pass",
+      "scenario": "unexpected_voltage_during_scan_latches_fault_safe"
+    },
+    {
+      "evidence_context": "host_simulation",
+      "observed": "limits_validated=false -> precheck error limits_unavailable, fault_safe, no token, nodes safe",
+      "requirement_refs": "REQ-SAF-006/RISK-016",
+      "result": "pass",
+      "scenario": "unvalidated_limits_refuse_scan"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

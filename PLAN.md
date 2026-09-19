@@ -46,8 +46,8 @@ Build a bench-top, USB-powered tester for disconnected passive cables and harnes
 4. Lay out the carrier and first adapter, run DRC/analyzers, and inspect fabrication geometry.
 5. Build firmware plus host simulation/classifier tests and reproducible flashing/recovery.
 6. Build the desktop companion and local import/export/privacy controls (baseline scaffold now implemented in `app/`, with deterministic mock-protocol tests and CI packaging checks).
-7. Integrate on fabricated hardware; record precheck thresholds, scan behavior, expected measurements, and limitations.
-8. Publish assembly instructions, troubleshooting, inspected manufacturing outputs, licenses, and a versioned release archive.
+7. Integrate on fabricated hardware; record precheck thresholds, scan behavior, expected measurements, and limitations. *(Integration scaffolding landed with issue #7: host-simulated scenario matrix, assembly guide, bring-up checklist, and characterization plan; physical execution still requires a fabricated unit.)*
+8. Publish assembly instructions, troubleshooting, inspected manufacturing outputs, licenses, and a versioned release archive. *(Docs, attribution, and release-readiness checklist landed with issue #7; the tag itself is gated on bench evidence — see `release/RELEASE-READINESS.md`.)*
 
 Milestone 1's normative baseline is captured in [system requirements](hardware/requirements.md), [architecture and profile semantics](docs/architecture.md), [protocol](docs/protocol.md), [misuse/fault analysis](docs/risk-analysis.md), and the [requirement-to-verification matrix](docs/verification-matrix.md). This closes the architecture definition only; the downstream evidence gates above remain open.
 

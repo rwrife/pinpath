@@ -6,7 +6,7 @@
 
 PinPath is planned as safe, repairable, open hardware for checking **disconnected, de-energized** passive cables and small wiring harnesses at a desk or workbench. Two configurable 16-position test banks connect through replaceable adapter boards or labeled flying leads. Firmware scans the conductors, reports the observed end-to-end map, and compares it with a user-selected expected map. A local desktop companion creates cable profiles and exports results.
 
-This repository contains the frozen MVP requirements/architecture, a manufacturer-backed **rev-A candidate component selection**, and the editable rev-A carrier schematic plus source-of-truth BOM and clean native ERC evidence. It now also contains an initial Tauri 2 companion-app implementation with deterministic mock-protocol tests, local SQLite persistence boundary, accessibility checks, and CI. It still does not contain a completed PCB layout, production/order validation, fabricated unit, or bench-test evidence. The candidate limits deliberately keep scanning unauthorized until physical characterization.
+This repository contains the frozen MVP requirements/architecture, a manufacturer-backed **rev-A candidate component selection**, the editable rev-A carrier schematic and routed carrier PCB candidate with source-of-truth BOM and clean native ERC/DRC evidence, RP2040 firmware with host-test scenario coverage, the Tauri 2 companion app with deterministic mock-protocol tests, and assembly/bring-up documentation. It still does not contain a fabricated unit or any bench-test evidence; `hardware/selection/limits-rev-a.json` deliberately keeps scanning unauthorized until physical characterization, and no release tag exists until that evidence does.
 
 ## Motivation
 
@@ -70,20 +70,24 @@ All status must be conveyed with text/icon shape in addition to color. The app m
 ```text
 hardware/pinpath.kicad_pro    # editable rev-A carrier project
 hardware/pinpath.kicad_sch    # editable carrier schematic and BOM source of truth
-hardware/pinpath.kicad_pcb    # planned carrier PCB; issue #4
+hardware/pinpath.kicad_pcb    # routed rev-A carrier candidate (see hardware/PCB-layout-evidence.md)
 hardware/adapters/            # known-loopback electrical definition; PCB adapters planned
 hardware/selection/           # rev-A candidate parts, evidence, calculations, and unvalidated limits
-firmware/                     # planned RP2040 firmware
+hardware/reports/             # ERC/DRC evidence and host-sim integration matrix
+hardware/fab-out/             # gerber/drill/CPL candidates, fab inspection, board renders
+firmware/                     # RP2040 safe-state firmware, host tests, scenario matrix, HIL fixture
 app/                          # Tauri 2 desktop companion (Rust + TypeScript)
 bom/bom.csv                   # schematic-derived tracked BOM
 bom/non-schematic-items.csv   # cables, contacts, tools, and mechanical items
+docs/                         # architecture, protocol, risk, verification matrix, assembly/bring-up docs
+release/                      # release-readiness checklist and checksum generator
 ```
 
 Final BOM data belongs in **KiCad schematic symbol properties** (including Manufacturer and MPN) and is exported to tracked `bom/bom.csv`. The preliminary CSV remains planning history; neither file is an order or a claim of current stock/price validation.
 
 ## Current status and milestones
 
-- **Now:** frozen MVP requirements/architecture, rev-A candidate component selection, editable carrier schematic, clean native ERC, schematic-derived BOM, and a first desktop companion skeleton with lint/tests/a11y/build/unsigned-package CI; PCB and physical validation remain pending
+- **Now:** frozen MVP requirements/architecture, rev-A candidate component selection, editable carrier schematic and routed carrier PCB candidate (0-error DRC, documented residuals), clean native ERC, schematic-derived BOM, RP2040 safe-state firmware with host tests and a 13-scenario integration matrix (host simulation), desktop companion with lint/tests/a11y/build/unsigned-package CI, assembly/bring-up/characterization documentation, and a release-readiness checklist (`release/RELEASE-READINESS.md`). Physical fabrication, assembly, and bench validation remain pending; scanning stays unauthorized until the limits record is validated on real hardware.
 - **M1:** requirements, risk analysis, and adapter/test architecture
 - **M2:** datasheet-backed component selection, editable KiCad schematic, and clean/documented ERC
 - **M3:** PCB, DRC, firmware, protocol, and simulated fixture tests
@@ -125,4 +129,9 @@ The firmware commands remain architectural targets. The app commands are now wir
 
 ## Licensing
 
-Software and documentation scaffolding are MIT licensed. Before fabrication release, the project will add an explicit open-hardware license for KiCad and mechanical design sources and document third-party module/adapter licenses.
+Software and documentation are MIT licensed (`LICENSE`); editable KiCad
+hardware sources are distributed under the same MIT grant for the rev-A
+candidate. Third-party code and documentation references are attributed in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Manufacturer datasheets cited
+in `hardware/selection/evidence-sources.json` remain the property of their
+respective manufacturers.
