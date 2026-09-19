@@ -38,6 +38,11 @@ if(PINPATH_BUILD_TESTS)
   add_executable(pinpath_core_tests tests/test_core.cpp)
   target_link_libraries(pinpath_core_tests PRIVATE pinpath_core)
   add_test(NAME pinpath_core_tests COMMAND pinpath_core_tests)
+
+  # Issue #7 integration scenario matrix (host simulation evidence).
+  add_executable(pinpath_scenario_matrix tests/test_scenarios.cpp)
+  target_link_libraries(pinpath_scenario_matrix PRIVATE pinpath_core)
+  add_test(NAME pinpath_scenario_matrix COMMAND pinpath_scenario_matrix)
 endif()
 
 if(PINPATH_BUILD_FIRMWARE)

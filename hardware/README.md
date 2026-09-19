@@ -64,3 +64,20 @@ decision are adjudicated in [PCB layout evidence](PCB-layout-evidence.md).
 Final Manufacturer/MPN/source data lives in schematic symbol properties and
 exports to tracked `bom/bom.csv`; volatile costs remain explicitly `UNKNOWN`
 until dated supplier evidence is obtained.
+
+## Issue #7 integration artifacts (2026-09-19)
+
+- `reports/erc-20260919-release.rpt` — native ERC re-run on committed
+  schematic: 0 errors / 0 warnings.
+- `reports/drc-20260919-release.json` — native DRC re-run including
+  schematic-parity: 0 errors, 63 warnings, 66 ratsnest items — identical to
+  the 2026-09-18 candidate state; the 4 parity entries are the off-schematic
+  mounting holes (intentional, see layout evidence item 4).
+- `reports/pinpath-schematic-20260919-release.pdf` — review PDF re-export.
+- `reports/integration-scenario-matrix-hostsim.json` — 13-scenario
+  integration matrix executed by `firmware/tests/test_scenarios.cpp`;
+  `host_simulation` evidence only, not bench evidence.
+- `fab-out/renders/` — native `kicad-cli pcb render` top/bottom renders of
+  the unpopulated candidate.
+- Assembly guide, bring-up checklist, and characterization plan live in
+  `../docs/`; the release gate is `../release/RELEASE-READINESS.md`.
